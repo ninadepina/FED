@@ -37,7 +37,7 @@ Responsive
 
 
 ### Je opdracht:
-https://wovenmagazine.com
+https://www.etq-amsterdam.com
 
 
 #### Screenshot(s) van de eerste pagina (small screen): 
