@@ -22,7 +22,7 @@ Nina Vens
 Rood
 
 #### Je focus:
-Surface plane
+Responsive
  
 </details>
 
