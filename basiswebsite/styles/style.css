@@ -13,15 +13,34 @@ html, body {
   padding: 0;
   margin: 0;
 }
-
+h2 {
+  font-family: var(--main-font);
+  font-size: 1.6em;
+}
+h3 {
+  font-family: var(--main-font);
+  font-size: 0.8em;
+  font-weight: 600;
+}
+p {
+  font-family: var(--main-font);
+  font-size: 0.6em;
+}
+li {
+  font-family: var(--main-font);
+  font-size: 0.6em;
+  list-style-type: none;
+} 
+a {
+  font-family: var(--main-font);
+  font-size: 0.8em;
+  color: var(--font-color);
+  text-decoration: none;
+}
 
 /* ---------------------- */
 
 .animateLink {
-  font-size: 0.8em;
-  color: var(--font-color);
-  text-decoration: none;
-
   display: inline;
   position: relative;
   overflow: hidden;
@@ -33,11 +52,10 @@ html, body {
   right: 0;
   width: 0;
   bottom: -5px;
-  background: #000;
+  background: black;
   height: 2%;
   transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
+  transition: 0.3s ease-out;
 }
 .animateLink:hover:after,
 .animateLink:focus:after,
@@ -47,10 +65,10 @@ html, body {
   width: 100%;
 }
 
+
 /* ----- first section ----- */
 
-section:nth-child(1) {
-  font-family: var(--main-font);
+section {
   letter-spacing: var(--letter-spacing);
   color: var(--font-color);
 }
@@ -68,7 +86,7 @@ section:nth-child(1) div {
   position: absolute;
   /* background-color: red; */
   transform: translateY(-50%);
-  left:70%;
+  left: 70%;
   top: 50%;
   padding: 0 9% 1.6% 3%;
 } 
@@ -77,7 +95,7 @@ section:nth-child(1) div {
   section:nth-child(1) img {
   position: absolute;
   height: 100vh;
-  left:0;
+  left: 0;
   top: 0;
   width: 100%;
   object-fit: cover;
@@ -87,7 +105,7 @@ section:nth-child(1) div {
     max-width: 400px;
     /* background-color: red; */
     transform: translateY(0%);
-    left:2%;
+    left: 2%;
     top: 70%;
     color: white;
   }
@@ -96,9 +114,6 @@ section:nth-child(1) div {
   }
 }
 
-section:nth-child(1) h2 {
-  font-size: 1.6em;
-}
 section:nth-child(1) h2 span {
   background-image: linear-gradient(120deg, #63c4fd 0%, #3de295 100%);
   background-repeat: no-repeat;
@@ -111,7 +126,6 @@ section:nth-child(1) h2 span:hover {
 }
 
 section:nth-child(1) p {
-  font-size: 0.6em;
   line-height: 200%;
 }
 
@@ -121,4 +135,45 @@ section:nth-child(1) p {
 /* ----- second section ----- */
 
 
+
+/* ----- third section ----- */
+
+
+
+
+
+.kaka {
+  display: flex;
+  margin-top: 108vh;
+  gap: 2em;
+}
+.kaka article:first-of-type {
+  margin-left: 2em;
+}
+.kaka article:first-of-type img {
+  width: 100%;
+}
+.kaka article:last-of-type {
+  margin-right: 2em;
+}
+.kaka article:last-of-type img {
+  width: 100%;
+}
+.kaka h3 {
+  cursor: pointer;
+}
+@media only screen and (max-width: 745px) {
+  .kaka {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 108vh;
+    gap: 2em;
+  }
+  .kaka article:first-of-type {
+    margin: 0 2em;
+  }
+  .kaka article:last-of-type {
+    margin: 0 2em;
+  }
+}
 
