@@ -1,12 +1,14 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing: border-box;  
 }
 
 :root {
   --main-font: 'Urbanist', sans-serif;
   --font-color: black;
   --letter-spacing: 2px;
+  --nav-static: white;
+  --nav-scroll: black;
 }
 
 html, body {
@@ -16,6 +18,7 @@ html, body {
 h2 {
   font-family: var(--main-font);
   font-size: 1.6em;
+  font-weight: 400;
 }
 h3 {
   font-family: var(--main-font);
@@ -25,11 +28,13 @@ h3 {
 p {
   font-family: var(--main-font);
   font-size: 0.6em;
+  font-weight: 300;
 }
 li {
   font-family: var(--main-font);
   font-size: 0.6em;
   list-style-type: none;
+  font-weight: 300;
 } 
 a {
   font-family: var(--main-font);
@@ -66,6 +71,157 @@ a {
 }
 
 
+/* ----- header ----- */
+
+.scrollHeader {
+  background: white;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 97vw;
+  max-width: 97vw;
+  z-index: 300;
+  margin: 0.8em 0 0 0.8em;
+  padding: 0.6em 1.2em 0.4em 0.6em;
+}
+header svg {
+  fill: var(--nav-static);
+  width: 90px;
+  margin: 0.2em 0 0 1em;
+}
+
+header nav {
+  /* background: blue; */
+  display: flex;
+  flex-direction: row;
+  width: 86vw;
+  padding: 0 2em;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 1450px) {
+  header nav {
+    width: 80vw;
+  }
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  /* background: blue; */
+  padding: 0;
+  width: 210px;
+}
+header nav ul li {
+  flex-direction: row;
+}
+header nav ul:first-of-type li a {
+  color: var(--nav-static);
+  font-size: 1.6em;
+}
+header nav ul:last-of-type li a {
+  color: var(--nav-scroll);
+  font-size: 1.6em;
+}
+header div:last-of-type {
+  background: var(--nav-scroll);
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+}
+header div:last-of-type a {
+  align-items: center;
+  color: var(--nav-static);
+  font-size: 0.8em;
+  line-height: 26px;
+}
+
+
+
+
+/* hamburger menu */
+details {
+  display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  header div:last-of-type {
+    margin-right: 40px;
+    background: var(--nav-static);
+  }
+  header div:last-of-type a {
+    color: var(--nav-scroll);
+  }
+  details {
+    display: block;
+  }
+  details ul {
+    background: white;
+    width: 94vw;
+    height: 86vh;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+  }
+  details ul li {
+    padding: 20px 0 20px 20px;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+  }
+  details ul li a {
+    font-size: 1.6em;
+  }
+
+  summary {
+    list-style-type: none;
+    /* background: red; */
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+  summary span {
+    display: block;
+    height: 2.6px;
+    width: 18px;
+    border-radius: 4px;
+    background-color: var(--nav-static);
+    margin: 0px 10px 0px 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+  }
+  summary span:before {
+    content: '';
+    height: 2.6px;
+    width: 18px;
+    border-radius: 4px;
+    background-color: var(--nav-static);
+    position: absolute;
+    top: 6px;
+  }
+
+  summary span::after {
+    content: '';
+    height: 2.6px;
+    width: 18px;
+    border-radius: 4px;
+    background-color: var(--nav-static);
+    position: absolute;
+    top: -6px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  
+
+}
+
+
 /* ----- first section ----- */
 
 section {
@@ -73,8 +229,10 @@ section {
   color: var(--font-color);
 }
 
-section:nth-child(1) img {
-  position: absolute;
+section:first-of-type {
+  position: relative;
+}
+section:first-of-type img {
   height: 100vh;
   left:0;
   top: 0;
@@ -82,7 +240,7 @@ section:nth-child(1) img {
   object-fit: cover;
 }
 
-section:nth-child(1) div {
+section:first-of-type div {
   position: absolute;
   /* background-color: red; */
   transform: translateY(-50%);
@@ -92,15 +250,14 @@ section:nth-child(1) div {
 } 
 
 @media only screen and (max-width: 1000px) {
-  section:nth-child(1) img {
-  position: absolute;
+  section:first-of-type img {
   height: 100vh;
   left: 0;
   top: 0;
   width: 100%;
   object-fit: cover;
   }
-  section:nth-child(1) div {
+  section:first-of-type div {
     position: absolute;
     max-width: 400px;
     /* background-color: red; */
@@ -109,23 +266,26 @@ section:nth-child(1) div {
     top: 70%;
     color: white;
   }
-  section:nth-child(1) a {
+  section:first-of-type a {
     color: white;
+  }
+  .animateLink:after {
+    background: white;
   }
 }
 
-section:nth-child(1) h2 span {
+section:first-of-type h2 span {
   background-image: linear-gradient(120deg, #63c4fd 0%, #3de295 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
   transition: background-size 0.25s ease-in;
 }
-section:nth-child(1) h2 span:hover { 
+section:first-of-type h2 span:hover { 
   background-size: 100% 88%;
 }
 
-section:nth-child(1) p {
+section:first-of-type p {
   line-height: 200%;
 }
 
@@ -144,36 +304,81 @@ section:nth-child(1) p {
 
 .kaka {
   display: flex;
-  margin-top: 108vh;
+  margin-top: 2em;
   gap: 2em;
 }
 .kaka article:first-of-type {
   margin-left: 2em;
 }
-.kaka article:first-of-type img {
-  width: 100%;
-}
 .kaka article:last-of-type {
   margin-right: 2em;
 }
-.kaka article:last-of-type img {
+.kaka article:first-of-type img, .kaka article:last-of-type img {
   width: 100%;
 }
 .kaka h3 {
   cursor: pointer;
 }
+
 @media only screen and (max-width: 745px) {
   .kaka {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 108vh;
+    margin-top: 2em;
     gap: 2em;
   }
-  .kaka article:first-of-type {
-    margin: 0 2em;
-  }
-  .kaka article:last-of-type {
+  .kaka article:first-of-type, .kaka article:last-of-type {
     margin: 0 2em;
   }
 }
+
+
+.uhuh {
+  display: flex;
+  margin: 2em;
+  gap: 2em;
+}
+.uhuh img {
+  width: 100%;
+}
+.uhuh div {
+  position: relative;
+}
+
+.uhuh button {
+  position: absolute;
+  height: 7%;
+  width: 8%;
+  background-color: rgba(255, 255, 255, 0.822);
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+.uhuh button p {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: var(--font-color);
+  display: block;
+  font-size: 1em;
+  margin: 0;
+}
+.uhuh div button:first-of-type {
+  left: 3%;
+  top: 50%;
+}
+.uhuh div button:last-of-type {
+  left: 90%;
+  top: 50%;
+}
+@media only screen and (max-width: 745px) {
+  .uhuh div:first-of-type {
+    display: none;
+  }
+  .uhuh div:last-of-type {
+    display: none;
+  }
+}
+
+
 
