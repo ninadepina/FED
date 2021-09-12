@@ -14,6 +14,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 h2 {
   font-family: var(--main-font);
@@ -43,7 +44,7 @@ a {
   text-decoration: none;
 }
 
-/* ---------------------- */
+/* ------------------------------------------------------------------------------------------ */
 
 .animateLink {
   display: inline;
@@ -57,7 +58,7 @@ a {
   right: 0;
   width: 0;
   bottom: -5px;
-  background: black;
+  background: var(--font-color);
   height: 2%;
   transition-property: width;
   transition: 0.3s ease-out;
@@ -69,8 +70,12 @@ a {
   right: auto;
   width: 100%;
 }
+.fff:after {
+  background: white;
+}
 
 
+/* ------------------------------------------------------------------------------------------ */
 /* ----- header ----- */
 
 .scrollHeader {
@@ -143,8 +148,8 @@ header div:last-of-type a {
 
 
 
-/* hamburger menu */
-details {
+/* HEADER hamburger menu */
+header details {
   display: none;
 }
 
@@ -156,10 +161,10 @@ details {
   header div:last-of-type a {
     color: var(--nav-scroll);
   }
-  details {
+  header details {
     display: block;
   }
-  details ul {
+  header details ul {
     background: white;
     width: 94vw;
     height: 86vh;
@@ -167,22 +172,25 @@ details {
     left: 0;
     padding: 10px;
   }
-  details ul li {
+  header details ul li {
     padding: 20px 0 20px 20px;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
-  details ul li a {
+  header details ul li a {
     font-size: 1.6em;
   }
 
-  summary {
+  header summary {
     list-style-type: none;
     /* background: red; */
     height: 35px;
     width: 35px;
     cursor: pointer;
   }
-  summary span {
+  header summary::-webkit-details-marker { /*removes marker in Safari (on mobile phone)*/
+    display: none;
+  }
+  header summary span {
     display: block;
     height: 2.6px;
     width: 18px;
@@ -193,7 +201,7 @@ details {
     transform: translate(-50%, -50%);
     top: 50%;
   }
-  summary span:before {
+  header summary span:before {
     content: '';
     height: 2.6px;
     width: 18px;
@@ -203,7 +211,7 @@ details {
     top: 6px;
   }
 
-  summary span::after {
+  header summary span::after {
     content: '';
     height: 2.6px;
     width: 18px;
@@ -216,18 +224,18 @@ details {
   header nav {
     display: none;
   }
-
-  
-
 }
 
 
-/* ----- first section ----- */
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------- */
 
 section {
   letter-spacing: var(--letter-spacing);
   color: var(--font-color);
 }
+
+/* ----- first section ----- */
 
 section:first-of-type {
   position: relative;
@@ -291,71 +299,100 @@ section:first-of-type p {
 
 
 
-
+/* ------------------------------------------------------------------------------------------ */
 /* ----- second section ----- */
 
-
-
-/* ----- third section ----- */
-
-
-
-
-
-.kaka {
+section:nth-child(2) {
   display: flex;
-  margin-top: 2em;
+  margin: 4em 0 6em 0;
+  padding-left: 2em;
   gap: 2em;
 }
-.kaka article:first-of-type {
-  margin-left: 2em;
+section:nth-child(2) article {
+  display: flex;
+  align-items: center;
+  width: 100vw;
 }
-.kaka article:last-of-type {
-  margin-right: 2em;
+section:nth-child(2) div {
+  padding-left: 2em;
+} 
+section:nth-child(2) img {
+  width: 40%;
 }
-.kaka article:first-of-type img, .kaka article:last-of-type img {
-  width: 100%;
-}
-.kaka h3 {
-  cursor: pointer;
+section:nth-child(2) a {
+  font-size: 0.6em;
+  line-height: 6em;
 }
 
 @media only screen and (max-width: 745px) {
-  .kaka {
-    display: flex;
+  section:nth-child(2) {
     flex-wrap: wrap;
-    margin-top: 2em;
-    gap: 2em;
+    gap: 1em;
   }
-  .kaka article:first-of-type, .kaka article:last-of-type {
-    margin: 0 2em;
+  section:nth-child(2) article:nth-child(2), section:nth-child(2) article:last-of-type {
+    width: 48%;
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  section:nth-child(2) {
+    padding-right: 2em;
+  }
+  section:nth-child(2) article {
+    display: block;
+  }
+  section:nth-child(2) div {
+    padding: 0;
+  }
+  section:nth-child(2) img {
+    width: 100%;
+  }
+}
 
-.uhuh {
+/* ------------------------------------------------------------------------------------------ */
+/* ----- third section ----- */
+
+section:nth-child(3) {
   display: flex;
   margin: 2em;
   gap: 2em;
 }
-.uhuh img {
-  width: 100%;
-}
-.uhuh div {
+section:nth-child(3) div {
   position: relative;
 }
+section:nth-child(3) img {
+  width: 100%;
+}
 
-.uhuh button {
+
+section:nth-child(3) button {
   position: absolute;
   height: 7%;
-  width: 8%;
+  width: 9%;
+  padding: 0;
+  transition: 1s;
+  opacity: 0;
   background-color: rgba(255, 255, 255, 0.822);
   border: 1px solid white;
   border-radius: 50%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   cursor: pointer;
-  padding: 0;
 }
-.uhuh button p {
+section:nth-child(3) div:first-of-type:hover #terugKnop1, section:nth-child(3) div:first-of-type:hover #vooruitKnop1 {
+  opacity: 1;
+  transition: 0.5s;
+}
+section:nth-child(3) div:nth-child(2):hover #terugKnop2, section:nth-child(3) div:nth-child(2):hover #vooruitKnop2 {
+  opacity: 1;
+  transition: 0.5s;
+}
+section:nth-child(3) div:last-of-type:hover #terugKnop3, section:nth-child(3) div:last-of-type:hover #vooruitKnop3 {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+
+section:nth-child(3) button p {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   color: var(--font-color);
@@ -363,22 +400,156 @@ section:first-of-type p {
   font-size: 1em;
   margin: 0;
 }
-.uhuh div button:first-of-type {
-  left: 3%;
-  top: 50%;
+section:nth-child(3) div button:first-of-type {
+  left: 10px;
+  top: 47%;
 }
-.uhuh div button:last-of-type {
-  left: 90%;
-  top: 50%;
+section:nth-child(3) div button:last-of-type {
+  right: 10px;
+  top: 47%;
 }
+
+@media only screen and (max-width: 802px) {
+  section:nth-child(3) {
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  section:nth-child(3) img {
+    width: 50vw;
+  }
+  section:nth-child(3) button {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----- fourth section ----- */
+
+section:nth-child(4) {
+  display: flex;
+  margin-top: 6em;
+  gap: 2em;
+}
+section:nth-child(4) article:first-of-type {
+  margin-left: 2em;
+}
+section:nth-child(4) article:last-of-type {
+  margin-right: 2em;
+}
+section:nth-child(4) article:first-of-type img, section:nth-child(4) article:last-of-type img {
+  width: 100%;
+}
+section:nth-child(4) h3 {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 745px) {
-  .uhuh div:first-of-type {
-    display: none;
+  section:nth-child(4) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    gap: 2em;
   }
-  .uhuh div:last-of-type {
-    display: none;
+  section:nth-child(4) article:first-of-type, section:nth-child(4) article:last-of-type {
+    margin: 0 2em;
   }
 }
 
 
+/* ------------------------------------------------------------------------------------------ */
+/* ----- footer ----- */
 
+footer {
+  display: flex;
+  margin-top: 10em;
+  padding-bottom: 2em;
+}
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  
+}
+footer li {
+  font-size: 0.8em;
+  line-height: 2em;
+  cursor: pointer;
+}
+footer div:nth-child(2) li {
+  line-height: 1.3em;
+}
+
+footer p {
+  font-size: 0.8em;
+  padding-top: 0.5em;
+}
+
+footer div {
+  padding: 0 1em 0 2em;
+  flex-grow: 1;
+}
+footer div:first-of-type {
+  flex-grow: 2;
+  max-width: 33%;
+}
+
+footer details {
+  display: none;
+}
+
+/* FOOTER menu */
+
+@media only screen and (max-width: 1000px) {
+  footer {
+    display: block;
+  }
+  footer div:first-of-type,footer div:nth-child(6), footer div:nth-child(7) h3, footer div:nth-child(8), footer div:last-of-type {
+    display: none;
+  }
+  footer div:nth-child(7) {
+    margin-top: 2em;
+  }
+
+  footer p, footer ul {
+    width: 94vw;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+  }
+  footer div:nth-child(7) ul {
+    border-bottom: none;
+  }
+
+  footer details {
+    display: block;
+    margin-left: 2em;
+  }
+  footer summary {
+    position: relative;
+    width: 94vw;
+    max-width: 100%;
+    font-family: var(--main-font);
+    font-size: 0.8em;
+    font-weight: 600;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+    cursor: pointer;
+    list-style-type: none;
+  }
+  footer summary::-webkit-details-marker {
+    display: none
+  }
+  
+  footer summary::after {
+    content: ' +';
+    position: absolute;
+    font-size: 1.2em;
+    right: 4%;
+  }
+  footer details[open] summary:after {
+    content: " -";
+    position: absolute;
+    font-size: 1.2em;
+    right: 4%;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------ */

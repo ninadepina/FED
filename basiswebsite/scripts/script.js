@@ -14,6 +14,34 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //------------------------------------------------------------------------------------------------
 var slider1 = document.querySelector('#slider1');
 var sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
