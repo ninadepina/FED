@@ -9,6 +9,8 @@
   --letter-spacing: 2px;
   --nav-static: white;
   --nav-scroll: black;
+  --js-color: white;
+  --js-zero: black;
 }
 
 html, body {
@@ -71,16 +73,12 @@ a {
   width: 100%;
 }
 .fff:after {
-  background: white;
+  background: var(--js-color);
 }
 
 
 /* ------------------------------------------------------------------------------------------ */
 /* ----- header ----- */
-
-.scrollHeader {
-  background: white;
-}
 
 header {
   display: flex;
@@ -94,7 +92,7 @@ header {
   padding: 0.6em 1.2em 0.4em 0.6em;
 }
 header svg {
-  fill: var(--nav-static);
+  fill: var(--js-color);
   width: 90px;
   margin: 0.2em 0 0 1em;
 }
@@ -154,19 +152,22 @@ header details {
 }
 
 @media only screen and (max-width: 1000px) {
+  header {
+    max-width: 97%;
+  }
   header div:last-of-type {
-    margin-right: 40px;
-    background: var(--nav-static);
+    
+    background: var(--js-color);
   }
   header div:last-of-type a {
-    color: var(--nav-scroll);
+    color: var(--js-zero);
   }
   header details {
     display: block;
   }
   header details ul {
     background: white;
-    width: 94vw;
+    width: 100%;
     height: 86vh;
     position: absolute;
     left: 0;
@@ -195,7 +196,7 @@ header details {
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--nav-static);
+    background-color: var(--js-color);
     margin: 0px 10px 0px 20px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -206,7 +207,7 @@ header details {
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--nav-static);
+    background-color: var(--js-color);
     position: absolute;
     top: 6px;
   }
@@ -216,7 +217,7 @@ header details {
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--nav-static);
+    background-color: var(--js-color);
     position: absolute;
     top: -6px;
   }
@@ -225,7 +226,21 @@ header details {
     display: none;
   }
 }
-
+@media only screen and (max-width: 925px) {
+  header {
+    max-width: 96%;
+  }
+}
+@media only screen and (max-width: 845px) {
+  header {
+    max-width: 95%;
+  }
+}
+@media only screen and (max-width: 745px) {
+  header {
+    max-width: 94%;
+  }
+}
 
 /* ------------------------------------------------------------------------------------------ */
 /* ---------------------- */
@@ -304,7 +319,7 @@ section:first-of-type p {
 
 section:nth-child(2) {
   display: flex;
-  margin: 4em 0 6em 0;
+  margin: 6em 0 0 0;
   padding-left: 2em;
   gap: 2em;
 }
@@ -317,7 +332,7 @@ section:nth-child(2) div {
   padding-left: 2em;
 } 
 section:nth-child(2) img {
-  width: 40%;
+  width: 44%;
 }
 section:nth-child(2) a {
   font-size: 0.6em;
@@ -330,11 +345,14 @@ section:nth-child(2) a {
     gap: 1em;
   }
   section:nth-child(2) article:nth-child(2), section:nth-child(2) article:last-of-type {
-    width: 48%;
+    width: 47%;
   }
 }
 
 @media only screen and (max-width: 1000px) {
+  section:nth-child(2) {
+    margin-top: 2em;
+  }
   section:nth-child(2) {
     padding-right: 2em;
   }
@@ -354,16 +372,21 @@ section:nth-child(2) a {
 
 section:nth-child(3) {
   display: flex;
-  margin: 2em;
+  flex-wrap: wrap;
+  margin: 2em 2em 4em 2em;
   gap: 2em;
 }
 section:nth-child(3) div {
   position: relative;
+  flex: 1;
 }
 section:nth-child(3) img {
   width: 100%;
 }
-
+section:nth-child(3) h2 {
+  width: 100%;
+  margin: 2em 0 0 0;
+}
 
 section:nth-child(3) button {
   position: absolute;
@@ -382,7 +405,7 @@ section:nth-child(3) div:first-of-type:hover #terugKnop1, section:nth-child(3) d
   opacity: 1;
   transition: 0.5s;
 }
-section:nth-child(3) div:nth-child(2):hover #terugKnop2, section:nth-child(3) div:nth-child(2):hover #vooruitKnop2 {
+section:nth-child(3) div:nth-child(3):hover #terugKnop2, section:nth-child(3) div:nth-child(3):hover #vooruitKnop2 {
   opacity: 1;
   transition: 0.5s;
 }
@@ -414,6 +437,9 @@ section:nth-child(3) div button:last-of-type {
     flex-wrap: nowrap;
     overflow-x: scroll;
   }
+  section:nth-child(3) h2 { 
+    display: none;
+  }
   section:nth-child(3) img {
     width: 50vw;
   }
@@ -422,12 +448,12 @@ section:nth-child(3) div button:last-of-type {
   }
 }
 
+
 /* ------------------------------------------------------------------------------------------ */
 /* ----- fourth section ----- */
 
 section:nth-child(4) {
   display: flex;
-  margin-top: 6em;
   gap: 2em;
 }
 section:nth-child(4) article:first-of-type {
@@ -501,6 +527,7 @@ footer details {
 @media only screen and (max-width: 1000px) {
   footer {
     display: block;
+    margin-top: 4em;
   }
   footer div:first-of-type,footer div:nth-child(6), footer div:nth-child(7) h3, footer div:nth-child(8), footer div:last-of-type {
     display: none;
@@ -510,7 +537,7 @@ footer details {
   }
 
   footer p, footer ul {
-    width: 94vw;
+    max-width: 88vw;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
@@ -533,23 +560,39 @@ footer details {
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
     cursor: pointer;
     list-style-type: none;
+    outline: none;
   }
   footer summary::-webkit-details-marker {
     display: none
   }
   
   footer summary::after {
-    content: ' +';
+    content: ' \002B';
     position: absolute;
     font-size: 1.2em;
     right: 4%;
   }
   footer details[open] summary:after {
-    content: " -";
+    content: " \002D";
     position: absolute;
     font-size: 1.2em;
     right: 4%;
   }
 }
 
+@media only screen and (max-width: 925px) {
+  footer {
+    max-width: 96%;
+  }
+}
+@media only screen and (max-width: 845px) {
+  footer {
+    max-width: 95%;
+  }
+}
+@media only screen and (max-width: 745px) {
+  footer {
+    max-width: 94%;
+  }
+}
 /* ------------------------------------------------------------------------------------------ */

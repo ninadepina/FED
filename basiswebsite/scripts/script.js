@@ -1,48 +1,32 @@
 
+//------------------------------------------------------------------------------------------------
 // changing header on scroll
-// var header = document.querySelector("#header");
-// var svg = document.querySelector("#fillSVG");
 
-// window.addEventListener('scroll', ()=> {
-//     if (window.pageYOffset > 50) {
-//         header.classList.add("scrollHeader");
-//     }
-//     else {
-//         header.classList.remove("scrollHeader");
-//     }
-// });
+window.addEventListener('scroll', ()=> {
+	if (window.pageYOffset > 50) {
+		document.getElementsByTagName('header')[0].style.background = "rgba(255, 255, 255, 0.95)";
+		document.getElementsByTagName('a')[6].style.color = "#000";
+		document.getElementsByTagName('a')[7].style.color = "#000";
+		document.getElementsByTagName('a')[8].style.color = "#000";
+		document.documentElement.style.setProperty("--js-color", "#000");
+		document.documentElement.style.setProperty("--js-zero", "#fff");
+	}
+	else {
+		document.getElementsByTagName('header')[0].style.background = "transparent";
+		document.getElementsByTagName('a')[6].style.color = "#fff";
+		document.getElementsByTagName('a')[7].style.color = "#fff";
+		document.getElementsByTagName('a')[8].style.color = "#fff";
+		document.documentElement.style.setProperty("--js-color", "#fff");
+		document.documentElement.style.setProperty("--js-zero", "#000");
+	}
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 
 //------------------------------------------------------------------------------------------------
+// shoe product sliders (html/css --> 3rd section)
 var slider1 = document.querySelector('#slider1');
 var sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
 var vooruitKnop1 = document.querySelector('#vooruitKnop1');
@@ -123,3 +107,6 @@ terugKnop3.addEventListener('click' , ()=> {
     threePaginaNr = threePaginaNr - 1 ;
 	threelaatFotoZien();
 } );
+
+
+//------------------------------------------------------------------------------------------------
