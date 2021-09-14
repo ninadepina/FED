@@ -2,31 +2,110 @@
 //------------------------------------------------------------------------------------------------
 // changing header on scroll
 
-window.addEventListener('scroll', ()=> {
-	if (window.pageYOffset > 50) {
-		document.getElementsByTagName('header')[0].style.background = "rgba(255, 255, 255, 0.95)";
-		document.getElementsByTagName('a')[6].style.color = "#000";
-		document.getElementsByTagName('a')[7].style.color = "#000";
-		document.getElementsByTagName('a')[8].style.color = "#000";
-		document.documentElement.style.setProperty("--js-color", "#000");
-		document.documentElement.style.setProperty("--js-zero", "#fff");
+window.onload = ()=> { //voegt classes toe na reload
+	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
+		document.getElementsByTagName('a')[6].classList.add('fff');
+		document.getElementsByTagName('a')[7].classList.add('fff');
+		document.getElementsByTagName('a')[8].classList.add('fff');
+		document.getElementsByTagName('a')[12].classList.add('ooo');
+		document.getElementsByTagName('svg')[0].classList.add('fffFill');
+		document.getElementsByTagName('div')[1].classList.add('fffBg');
+		document.getElementsByTagName('span')[0].classList.add('fffBg');
 	}
 	else {
-		document.getElementsByTagName('header')[0].style.background = "transparent";
-		document.getElementsByTagName('a')[6].style.color = "#fff";
-		document.getElementsByTagName('a')[7].style.color = "#fff";
-		document.getElementsByTagName('a')[8].style.color = "#fff";
-		document.documentElement.style.setProperty("--js-color", "#fff");
-		document.documentElement.style.setProperty("--js-zero", "#000");
+		document.getElementsByTagName('a')[6].classList.add('fff');
+		document.getElementsByTagName('a')[7].classList.add('fff');
+		document.getElementsByTagName('a')[8].classList.add('fff');
+		document.getElementsByTagName('a')[12].classList.add('fff');
+		document.getElementsByTagName('svg')[0].classList.add('fffFill');
+		document.getElementsByTagName('div')[1].classList.add('oooBg');
+		document.getElementsByTagName('span')[0].classList.add('fffBg');
+	}
+}
+
+window.onresize = function() {location.reload();} //auto reload na schalen browser
+
+//-(all elements)-
+window.addEventListener('scroll', ()=> {
+	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
+		document.getElementsByTagName('a')[6].classList.remove('ooo');
+		document.getElementsByTagName('a')[7].classList.remove('ooo');
+		document.getElementsByTagName('a')[8].classList.remove('ooo');
+
+		document.getElementsByTagName('header')[0].classList.remove('transparent');
+		document.getElementsByTagName('a')[6].classList.remove('fff');
+		document.getElementsByTagName('a')[7].classList.remove('fff');
+		document.getElementsByTagName('a')[8].classList.remove('fff');
+		document.getElementsByTagName('svg')[0].classList.remove('fffFill');	
+		document.getElementsByTagName('span')[0].classList.remove('fffBg');
+
+		document.getElementsByTagName('header')[0].classList.add('fffTransparent');
+		document.getElementsByTagName('svg')[0].classList.add('oooFill');
+		document.getElementsByTagName('span')[0].classList.add('oooBg');
+	}
+	else if (window.pageYOffset > 50) {
+		document.getElementsByTagName('header')[0].classList.remove('transparent');
+		document.getElementsByTagName('a')[6].classList.remove('fff');
+		document.getElementsByTagName('a')[7].classList.remove('fff');
+		document.getElementsByTagName('a')[8].classList.remove('fff');
+		document.getElementsByTagName('svg')[0].classList.remove('fffFill');
+		document.getElementsByTagName('span')[0].classList.remove('fffBg');
+		document.getElementsByTagName('span')[0].classList.remove('oooBg');
+
+		document.getElementsByTagName('header')[0].classList.add('fffTransparent');
+		document.getElementsByTagName('a')[6].classList.add('ooo');
+		document.getElementsByTagName('a')[7].classList.add('ooo');
+		document.getElementsByTagName('a')[8].classList.add('ooo');
+		document.getElementsByTagName('svg')[0].classList.add('oooFill');
+	}
+	else {
+		document.getElementsByTagName('header')[0].classList.remove('fffTransparent');
+		document.getElementsByTagName('a')[6].classList.remove('ooo');
+		document.getElementsByTagName('a')[7].classList.remove('ooo');
+		document.getElementsByTagName('a')[8].classList.remove('ooo');
+		document.getElementsByTagName('svg')[0].classList.remove('oooFill');
+		document.getElementsByTagName('span')[0].classList.remove('oooBg');
+
+		document.getElementsByTagName('header')[0].classList.add('transparent');
+		document.getElementsByTagName('a')[6].classList.add('fff');
+		document.getElementsByTagName('a')[7].classList.add('fff');
+		document.getElementsByTagName('a')[8].classList.add('fff');
+		document.getElementsByTagName('svg')[0].classList.add('fffFill');	
+		document.getElementsByTagName('span')[0].classList.add('fffBg');	
 	}
 });
 
-	
-
-
+//-(shopping cart element)-
+window.addEventListener('scroll', ()=> { 
+	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
+		document.getElementsByTagName('a')[12].classList.remove('ooo');
+		document.getElementsByTagName('a')[12].classList.add('fff');
+		document.getElementsByTagName('div')[1].classList.remove('fffBg');
+		document.getElementsByTagName('div')[1].classList.add('oooBg');
+	}
+	else if (window.pageYOffset > 50) {
+		document.getElementsByTagName('a')[12].classList.remove('ooo');
+		document.getElementsByTagName('a')[12].classList.add('fff');
+		document.getElementsByTagName('div')[1].classList.remove('fffBg');
+		document.getElementsByTagName('div')[1].classList.add('oooBg');
+	}
+	else if (window.matchMedia('screen and (max-width: 1000px)').matches){
+		document.getElementsByTagName('a')[12].classList.remove('fff');
+		document.getElementsByTagName('a')[12].classList.add('ooo');
+		document.getElementsByTagName('div')[1].classList.remove('oooBg');
+		document.getElementsByTagName('div')[1].classList.add('fffBg');
+	}
+	else {
+		document.getElementsByTagName('a')[12].classList.remove('ooo');
+		document.getElementsByTagName('a')[12].classList.add('fff');
+		document.getElementsByTagName('div')[1].classList.remove('fffBg');
+		document.getElementsByTagName('div')[1].classList.add('oooBg');
+	}
+});
 
 //------------------------------------------------------------------------------------------------
 // shoe product sliders (html/css --> 3rd section)
+//-(1st product)----------------------------------------------------------------------------------
 var slider1 = document.querySelector('#slider1');
 var sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
 var vooruitKnop1 = document.querySelector('#vooruitKnop1');
@@ -45,15 +124,15 @@ function onelaatFotoZien() {
 	slider1.src = 'images/' + sliderFotos1[onePaginaNr];
 }
 
-vooruitKnop1.addEventListener('click' , ()=> {
+vooruitKnop1.addEventListener('click', ()=> {
     onePaginaNr = onePaginaNr + 1 ;
 	onelaatFotoZien();
 } );
-terugKnop1.addEventListener('click' , ()=> {
+terugKnop1.addEventListener('click', ()=> {
     onePaginaNr = onePaginaNr - 1 ;
 	onelaatFotoZien();
 } );
-//------------------------------------------------------------------------------------------------
+//-(2nd product)----------------------------------------------------------------------------------
 var slider2 = document.querySelector('#slider2');
 var sliderFotos2 = ['shoe2slider1.png', 'shoe2slider2.png', 'shoe2slider3.png', 'shoe2slider4.png', 'shoe2slider5.png'];
 var vooruitKnop2 = document.querySelector('#vooruitKnop2');
@@ -72,15 +151,15 @@ function twolaatFotoZien() {
 	slider2.src = 'images/' + sliderFotos2[twoPaginaNr];
 }
 
-vooruitKnop2.addEventListener('click' , ()=> {
+vooruitKnop2.addEventListener('click', ()=> {
     twoPaginaNr = twoPaginaNr + 1 ;
 	twolaatFotoZien();
 } );
-terugKnop2.addEventListener('click' , ()=> {
+terugKnop2.addEventListener('click', ()=> {
     twoPaginaNr = twoPaginaNr - 1 ;
 	twolaatFotoZien();
 } );
-//------------------------------------------------------------------------------------------------
+//-(3rd product)----------------------------------------------------------------------------------
 var slider3 = document.querySelector('#slider3');
 var sliderFotos3 = ['shoe3slider1.png', 'shoe3slider2.png', 'shoe3slider3.png', 'shoe3slider4.png', 'shoe3slider5.png', 'shoe3slider6.png'];
 var vooruitKnop3 = document.querySelector('#vooruitKnop3');
@@ -99,11 +178,11 @@ function threelaatFotoZien() {
 	slider3.src = 'images/' + sliderFotos3[threePaginaNr];
 }
 
-vooruitKnop3.addEventListener('click' , ()=> {
+vooruitKnop3.addEventListener('click', ()=> {
     threePaginaNr = threePaginaNr + 1 ;
 	threelaatFotoZien();
 } );
-terugKnop3.addEventListener('click' , ()=> {
+terugKnop3.addEventListener('click', ()=> {
     threePaginaNr = threePaginaNr - 1 ;
 	threelaatFotoZien();
 } );

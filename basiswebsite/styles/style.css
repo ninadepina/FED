@@ -1,16 +1,14 @@
 /* CSS Document */
 *, *::after, *::before {
   box-sizing: border-box;  
+  outline: none;
 }
 
 :root {
   --main-font: 'Urbanist', sans-serif;
   --font-color: black;
-  --letter-spacing: 2px;
   --nav-static: white;
   --nav-scroll: black;
-  --js-color: white;
-  --js-zero: black;
 }
 
 html, body {
@@ -46,6 +44,7 @@ a {
   text-decoration: none;
 }
 
+
 /* ------------------------------------------------------------------------------------------ */
 
 .animateLink {
@@ -72,8 +71,50 @@ a {
   right: auto;
   width: 100%;
 }
-.fff:after {
-  background: var(--js-color);
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ----- classes for javascript ----- */
+.fff {
+  color: white;
+}
+.fff::after {
+  background: white;
+}
+.fffTransparent {
+  background: rgba(255, 255, 255, 0.925);
+}
+.fffBg{
+  background: white;
+}
+.fffBg::before {
+  background: white;
+}
+.fffBg::after {
+  background: white;
+}
+.fffFill {
+  fill: white;
+}
+
+.ooo {
+  color: black;
+}
+.oooBg {
+  background: black;
+}
+.oooBg::before {
+  background: black;
+}
+.oooBg::after {
+  background: black;
+}
+.oooFill {
+  fill: black;
+}
+
+.transparent {
+  background: transparent;
 }
 
 
@@ -92,7 +133,6 @@ header {
   padding: 0.6em 1.2em 0.4em 0.6em;
 }
 header svg {
-  fill: var(--js-color);
   width: 90px;
   margin: 0.2em 0 0 1em;
 }
@@ -122,7 +162,6 @@ header nav ul li {
   flex-direction: row;
 }
 header nav ul:first-of-type li a {
-  color: var(--nav-static);
   font-size: 1.6em;
 }
 header nav ul:last-of-type li a {
@@ -130,7 +169,6 @@ header nav ul:last-of-type li a {
   font-size: 1.6em;
 }
 header div:last-of-type {
-  background: var(--nav-scroll);
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -138,7 +176,6 @@ header div:last-of-type {
 }
 header div:last-of-type a {
   align-items: center;
-  color: var(--nav-static);
   font-size: 0.8em;
   line-height: 26px;
 }
@@ -154,13 +191,6 @@ header details {
 @media only screen and (max-width: 1000px) {
   header {
     max-width: 97%;
-  }
-  header div:last-of-type {
-    
-    background: var(--js-color);
-  }
-  header div:last-of-type a {
-    color: var(--js-zero);
   }
   header details {
     display: block;
@@ -196,7 +226,6 @@ header details {
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--js-color);
     margin: 0px 10px 0px 20px;
     position: absolute;
     transform: translate(-50%, -50%);
@@ -207,17 +236,14 @@ header details {
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--js-color);
     position: absolute;
     top: 6px;
   }
-
   header summary span::after {
     content: '';
     height: 2.6px;
     width: 18px;
     border-radius: 4px;
-    background-color: var(--js-color);
     position: absolute;
     top: -6px;
   }
@@ -246,8 +272,8 @@ header details {
 /* ---------------------- */
 
 section {
-  letter-spacing: var(--letter-spacing);
   color: var(--font-color);
+  letter-spacing: 2px;
 }
 
 /* ----- first section ----- */
@@ -265,7 +291,7 @@ section:first-of-type img {
 
 section:first-of-type div {
   position: absolute;
-  /* background-color: red; */
+  /* background: red; */
   transform: translateY(-50%);
   left: 70%;
   top: 50%;
@@ -274,16 +300,16 @@ section:first-of-type div {
 
 @media only screen and (max-width: 1000px) {
   section:first-of-type img {
-  height: 100vh;
-  left: 0;
-  top: 0;
-  width: 100%;
-  object-fit: cover;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
   }
   section:first-of-type div {
     position: absolute;
     max-width: 400px;
-    /* background-color: red; */
+    /* background: red; */
     transform: translateY(0%);
     left: 2%;
     top: 70%;
@@ -367,6 +393,7 @@ section:nth-child(2) a {
   }
 }
 
+
 /* ------------------------------------------------------------------------------------------ */
 /* ----- third section ----- */
 
@@ -437,14 +464,11 @@ section:nth-child(3) div button:last-of-type {
     flex-wrap: nowrap;
     overflow-x: scroll;
   }
-  section:nth-child(3) h2 { 
+  section:nth-child(3) h2, section:nth-child(3) button { 
     display: none;
   }
   section:nth-child(3) img {
     width: 50vw;
-  }
-  section:nth-child(3) button {
-    display: none;
   }
 }
 
@@ -560,7 +584,6 @@ footer details {
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
     cursor: pointer;
     list-style-type: none;
-    outline: none;
   }
   footer summary::-webkit-details-marker {
     display: none
@@ -595,4 +618,10 @@ footer details {
     max-width: 94%;
   }
 }
-/* ------------------------------------------------------------------------------------------ */
+
+
+/* ----------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------ 
+ ------------------------------------------------------------------------------------------ 
+ ------------------------------------------------------------------------------------------ */
+
