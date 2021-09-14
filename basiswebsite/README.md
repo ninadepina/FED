@@ -12,7 +12,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 ## Jij
 
-<details open>
+<details>
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
@@ -32,7 +32,7 @@ Responsive
 
 ## Je website
 
-<details open>
+<details>
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 
@@ -227,13 +227,22 @@ hier screenshot(s) van je eindresultaat
 
 ## Bronnenlijst
 
-<details open>
-<summary>continu bijhouden terwijl je werkt</summary>
+<details>
+<summary></summary>
 
-Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
-
+### Html
 1. bron 1
 2. bron 2
+3. ...
+
+### CSS
+1. bron 1
+2. bron 2
+3. ...
+
+### Javascript
+1. getElementsByTagName: https://stackoverflow.com/questions/17349081/change-style-of-all-elements-using-getelementsbytagname
+2. detect screen width: https://stackoverflow.com/questions/31162606/how-to-detect-screen-size-for-responsive-web-design
 3. ...
 
 </details>
