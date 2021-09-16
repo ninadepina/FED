@@ -77,26 +77,29 @@ shoecare
 <summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+Als ik eenmaal begin met coderen/programmeren pak ik het weer snel op.
+-
+Stand van zaken:
+- homepagina is af (responsive en wel)
+- nu verder met de tweede pagina
 
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Nina (ik)      | Mick               | Sarah            | 
+| ---            | ---                | ---              | 
+| x              | Uitlijnen tekst in | ?                | 
+|                | de hoogte          |                  | 
+|                |                    |                  | 
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- loop prima op schema
+- op school werken kan ook
+- handig om met wat studenten samen wat te doen
+- 1 + 1 = 3
 
 </details>
 
@@ -231,7 +234,7 @@ hier screenshot(s) van je eindresultaat
 <summary></summary>
 
 ### Html
-1. bron 1
+1. svg tag: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
 2. bron 2
 3. ...
 
@@ -243,6 +246,7 @@ hier screenshot(s) van je eindresultaat
 ### Javascript
 1. getElementsByTagName: https://stackoverflow.com/questions/17349081/change-style-of-all-elements-using-getelementsbytagname
 2. detect screen width: https://stackoverflow.com/questions/31162606/how-to-detect-screen-size-for-responsive-web-design
-3. ...
+3. reload after resize: https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
+4. addEventListener 'mouseout': https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event
 
 </details>

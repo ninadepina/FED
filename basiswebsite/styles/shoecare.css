@@ -1,0 +1,571 @@
+*, *::after, *::before {
+    box-sizing: border-box;  
+    outline: none;
+  }
+  *::selection {
+    background: #83dde077;
+  }
+  
+  :root {
+    --main-font: 'Urbanist', sans-serif;
+    --font-color: black;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  h1 {
+    position: absolute;
+    left: -1000px;
+  }
+  h2 {
+    font-family: var(--main-font);
+    font-size: 1.6em;
+    font-weight: 400;
+  }
+  h3 {
+    font-family: var(--main-font);
+    font-size: 0.8em;
+    font-weight: 600;
+  }
+  p {
+    font-family: var(--main-font);
+    font-size: 1em;
+    font-weight: 300;
+  }
+  li {
+    font-family: var(--main-font);
+    font-size: 0.6em;
+    list-style-type: none;
+    font-weight: 300;
+  } 
+  a {
+    font-family: var(--main-font);
+    font-size: 0.8em;
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  
+  
+  /* ------------------------------------------------------------------------------------------ */
+  
+  .animateLink {
+    display: inline;
+    position: relative;
+    overflow: hidden;
+  }
+  .animateLink:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2%;
+    background: var(--font-color);
+    transition-property: width;
+    transition: 0.3s ease-out;
+  }
+  .animateLink:hover:after,
+  .animateLink:focus:after,
+  .animateLink:active:after {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  
+  
+  
+  
+  
+  /* ----- ---------------------- ----- */
+  /* ----- CLASSES FOR JAVASCRIPT ----- */
+  /* ----- ---------------------- ----- */
+.fff {
+  color: white;
+}
+.fff::after {
+  background: white;
+}
+.fffTransparent {
+  background: rgba(255, 255, 255, 0.925);
+}
+.fffBg{
+  background: white;
+}
+.fffBg::before {
+  background: white;
+}
+.fffBg::after {
+  background: white;
+}
+.fffFill {
+  fill: white;
+}
+  
+.ooo {
+  color: black;
+}
+.oooBg {
+  background: black;
+}
+.oooBg::before {
+  background: black;
+}
+.oooBg::after {
+  background: black;
+}
+.oooFill {
+  fill: black;
+}
+
+.transparentText {
+  color: transparent;
+}
+.transparent {
+  background: transparent;
+}
+
+.displayNone {
+  display: none;
+}
+  
+  
+  
+  
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 97vw;
+    max-width: 97vw;
+    z-index: 300;
+    margin: 0.8em 0 0 0.8em;
+    padding: 0.6em 1.2em 0.4em 0.6em;
+  }
+  header svg {
+    width: 90px;
+    margin: 0.2em 0 0 1em;
+  }
+  
+  header nav {
+    /* background: blue; */
+    display: flex;
+    flex-direction: row;
+    width: 86vw;
+    padding: 0 2em;
+    justify-content: space-between;
+  }
+  @media only screen and (min-width: 1450px) {
+    header nav {
+      width: 80vw;
+    }
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: space-between;
+    /* background: blue; */
+    padding: 0;
+    width: 210px;
+  }
+  header nav ul li {
+    flex-direction: row;
+  }
+  header nav ul:first-of-type li a {
+    font-size: 1.6em;
+  }
+  header nav ul:last-of-type li a {
+    font-size: 1.6em;
+  }
+  header div:last-of-type {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+  }
+  header div:last-of-type a {
+    align-items: center;
+    font-size: 0.8em;
+    line-height: 26px;
+  }
+  
+  
+  /* ----- ---------------- ----- */
+  /* ----- HEADER HAMBURGER ----- */
+  /* ----- ---------------- ----- */
+header details {
+  display: none;
+}
+  
+@media only screen and (max-width: 1000px) {
+  header {
+    max-width: 97%;
+  }
+  header details {
+    display: block;
+  }
+  header details ul {
+    background: white;
+    width: 100%;
+    height: 86vh;
+    position: absolute;
+    left: 0;
+    padding: 10px;
+  }
+  header details ul li {
+    padding: 20px 0 20px 20px;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+  }
+  header details ul li a {
+    font-size: 1.6em;
+  }
+  
+  header summary {
+    width: 35px;
+    height: 35px;
+    /* background: red; */
+    list-style-type: none;
+    cursor: pointer;
+  }
+  header summary::-webkit-details-marker { /*removes marker in Safari (on mobile phone)*/
+    display: none;
+  }
+  header summary span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    width: 18px;
+    height: 2.6px;
+    margin: 0px 10px 0px 20px;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+  }
+  header summary span:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    width: 18px;
+    height: 2.6px;
+    border-radius: 4px;
+  }
+  header summary span::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    width: 18px;
+    height: 2.6px;
+    border-radius: 4px;  
+  }
+  
+  header nav {
+    display: none;
+  }
+}
+@media only screen and (max-width: 925px) {
+  header {
+    max-width: 96%;
+  }
+}
+@media only screen and (max-width: 845px) {
+  header {
+    max-width: 95%;
+  }
+}
+@media only screen and (max-width: 745px) {
+  header {
+    max-width: 94%;
+  }
+}
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------- */
+
+section {
+    color: var(--font-color);
+    letter-spacing: 2px;
+}
+  
+  
+  
+  
+  
+/* ----- ------------- ----- */
+/* ----- FIRST SECTION ----- */
+/* ----- ------------- ----- */
+
+section:first-of-type {
+    position: relative;
+}
+
+section:first-of-type img {
+    width: 100vw;
+    object-fit: cover;
+}
+section:first-of-type h2 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+@media only screen and (max-width: 1000px) {
+    section:first-of-type img {
+        height: 80vw;
+    }
+}
+@media only screen and (max-width: 515px) {
+    section:first-of-type h2 {
+        left: 24%;
+        transform: none;
+    }
+}
+@media only screen and (max-width: 376px) {
+    section:first-of-type img {
+        height: 65vh;
+    }
+    section:first-of-type h2 {
+        left: 18%;
+        transform: none;
+    }
+}
+
+
+
+/* ----- -------------- ----- */
+/* ----- SECOND SECTION ----- */
+/* ----- -------------- ----- */
+
+section:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4em 2em 2em 2em;
+  gap: 0 1em;
+}
+section:nth-child(2) h3 {
+  flex-basis: 100%;
+}
+section:nth-child(2) p {
+  flex-basis: 48%;
+}
+
+@media only screen and (max-width: 1000px) {
+  section:nth-child(2) p {
+    flex-basis: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 376px) {
+  section:nth-child(2) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+
+
+
+
+/* ------ ------------ ------ */
+/* ------ LAST SECTION ------ */
+/* ------ ------------ ------ */
+
+section:last-of-type {
+  left: 50%;
+  top: 93%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  font-size: 0.8em;
+  z-index: 100;
+}
+section:last-of-type p, section:last-of-type a {
+  font-size: 1em;
+}
+
+section:last-of-type input[type="checkbox"] {
+  display: none;
+}
+section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:first-of-type {
+  font-weight: 300;
+}
+section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:last-of-type {
+  font-weight: 300;
+  z-index: 3;
+}
+section:last-of-type input[type="checkbox"]:checked ~ label div div:last-of-type {
+  left: calc(50% + 0.25em);
+}
+section:last-of-type label div {
+  user-select: none;
+  max-width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  cursor: pointer;
+}
+section:last-of-type div div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 3em;
+  transition: 0.2s;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 15px;
+  border: 1px solid rgb(221, 221, 221);
+}
+section:last-of-type div div:first-of-type a {
+  padding: 1em 2em;
+  text-align: center;
+  font-weight: 300;
+  z-index: 3;
+}
+section:last-of-type div div:last-of-type {
+  z-index: 2;
+  top: 0.25em;
+  position: absolute;
+  height: calc(100% - 0.5em);
+  width: calc(50% - 0.5em);
+  border-radius: 3rem;
+  background-color: black;
+  transition: 0.2s;
+}
+.left {
+  transform: translateX(0.3em);
+}
+.right {
+  transform: translateX(8.6em);
+}
+section:last-of-type div div:first-of-type p:first-of-type {
+  position: absolute;
+  left: 2em;
+  z-index: 1;
+  color: black;
+}
+section:last-of-type div div:first-of-type p:last-of-type {
+  position: absolute;
+  right: 2.9em;
+  z-index: 1;
+  color: black;
+}
+
+
+
+
+
+/* ----- ------------ */
+/* ----- FOOTER ----- */
+/* ----- ------ ----- */
+
+footer {
+    display: flex;
+    margin-top: 10em;
+    padding-bottom: 2em;
+}
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+footer li {
+    font-size: 0.8em;
+    line-height: 2em;
+    cursor: pointer;
+}
+footer div:nth-child(2) li{
+    line-height: 1.3em;
+}
+
+footer p {
+    padding-top: 0.5em;
+    font-size: 0.8em;
+}
+
+footer div {
+    padding: 0 1em 0 2em;
+    flex-grow: 1;
+}
+footer div:first-of-type {
+    flex-grow: 2;
+    max-width: 33%;
+}
+
+footer details {
+    display: none;
+}
+
+
+
+/* ----- ------------------ ----- */
+/* ----- FOOTER 'HAMBURGER' ----- */
+/* ----- ------------------ ----- */
+
+@media only screen and (max-width: 1000px) {
+    footer {
+      display: block;
+      margin-top: 4em;
+    }
+    footer div:first-of-type,footer div:nth-child(6), footer div:nth-child(7) h3, footer div:nth-child(8), footer div:last-of-type {
+      display: none;
+    }
+    footer div:nth-child(7) {
+      margin-top: 2em;
+    }
+    
+    footer p, footer ul {
+      max-width: 88vw;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+    }
+    footer div:nth-child(7) ul {
+      border-bottom: none;
+    }
+    
+    footer details {
+      display: block;
+      margin-left: 2em;
+    }
+    footer summary {
+      position: relative;
+      max-width: 100%;
+      width: 94vw;
+      padding: 20px 0;
+      font-family: var(--main-font);
+      font-size: 0.8em;
+      font-weight: 600;
+      list-style-type: none;
+      border-bottom: 1px solid rgba(224, 224, 224, 0.726);
+      cursor: pointer;
+    }
+    footer summary::-webkit-details-marker {
+      display: none
+    }
+      
+    footer summary::after {
+      content: ' \002B';
+      position: absolute;
+      right: 4%;
+      font-size: 1.2em;
+    }
+    footer details[open] summary:after {
+      content: " \002D";
+      position: absolute;
+      right: 4%;
+      font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+  footer {
+    max-width: 96%;
+  }
+}
+@media only screen and (max-width: 845px) {
+  footer {
+    max-width: 95%;
+  }
+}
+@media only screen and (max-width: 745px) {
+  footer {
+    max-width: 94%;
+  }
+}
