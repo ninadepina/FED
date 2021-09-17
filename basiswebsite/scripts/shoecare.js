@@ -1,7 +1,10 @@
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // changing header on scroll
 
-window.onload = ()=> { //adds classes after reload
+
+//adds classes after reload
+window.onload = ()=> { 
+
 	//page has a max width of 1000px
 	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
@@ -15,6 +18,7 @@ window.onload = ()=> { //adds classes after reload
 		document.querySelector('header div:last-of-type').classList.add('fffBg');
 		document.querySelector('header details summary span').classList.add('fffBg');
 	}
+
 	//page is scrolled and screen has a max width of 1000px
     else if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
         document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
@@ -28,6 +32,7 @@ window.onload = ()=> { //adds classes after reload
 		document.querySelector('header div:last-of-type').classList.add('fffBg');
 		document.querySelector('header details summary span').classList.add('fffBg');
     }
+
 	else {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
@@ -42,10 +47,12 @@ window.onload = ()=> { //adds classes after reload
 	}
 }
 
-window.onresize = function() {location.reload();} //auto reload after scaling the browser
+//auto reload after scaling the browser
+window.onresize = function() {location.reload();} 
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {
+
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
@@ -62,6 +69,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
 		document.querySelector('header details summary span').classList.add('oooBg');
 	}
+
 	//page is scrolled
 	else if (window.pageYOffset > 50) {
 		document.querySelector('header').classList.remove('transparent');
@@ -84,6 +92,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('ooo');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('ooo');
 	}
+
 	else {
 		document.querySelector('header').classList.remove('fffTransparent');
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
@@ -109,6 +118,7 @@ window.addEventListener('scroll', ()=> {
 
 //-(shopping cart element)-
 window.addEventListener('scroll', ()=> { 
+
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header div:last-of-type a').classList.remove('ooo');
@@ -116,13 +126,15 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:last-of-type').classList.remove('fffBg');
 		document.querySelector('header div:last-of-type').classList.add('oooBg');
 	}
+
+	//page is scrolled 
 	else if (window.pageYOffset > 50) {
-		//page is scrolled 
 		document.querySelector('header div:last-of-type a').classList.remove('ooo');
 		document.querySelector('header div:last-of-type a').classList.add('fff');
 		document.querySelector('header div:last-of-type').classList.remove('fffBg');
 		document.querySelector('header div:last-of-type').classList.add('oooBg');
 	}
+
 	else {
 		document.querySelector('header div:last-of-type a').classList.remove('fff');
 		document.querySelector('header div:last-of-type a').classList.add('ooo');
@@ -133,21 +145,51 @@ window.addEventListener('scroll', ()=> {
 
 
 
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 // toggle element in the bottom of the screen
-
 var toggle = document.querySelector('main section:last-of-type label');
-toggle.classList.add('displayNone');
 
-//hidden until user scrolls past the header
-window.addEventListener('scroll', ()=> {
-	if (window.pageYOffset > 170) {
+//adds classes after reload
+window.onload = ()=> { 
+	//screen has a max-width of 710px
+	if (window.matchMedia('screen and (max-width: 710px)').matches) {
 		toggle.classList.remove('displayNone');
 	}
 	else {
 		toggle.classList.add('displayNone');
 	}
+}
+
+//auto reload after scaling the browser
+window.onresize = function() {location.reload();} 
+
+
+//visibility changes of the toggle element when scrolled
+window.addEventListener('scroll', ()=> {
+
+	//page has Yoffset > 170 (so page is scrolled) and screen has a min-width of 1001px and user DOESN'T scroll over footer
+	if (window.pageYOffset > 170 && window.matchMedia('screen and (min-width: 1001px)').matches && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 150) {
+		toggle.classList.remove('displayNone');
+	}
+	
+	//page has Yoffset > 180 (so page is scrolled) and screen has a max-width of 1000px + a min-width of 711px and user DOESN'T scroll over footer
+	else if (window.pageYOffset > 180 && window.matchMedia('screen and (max-width: 1000px)').matches && window.matchMedia('screen and (min-width: 711px)').matches && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 335) {
+		toggle.classList.remove('displayNone');
+	}
+
+	//screen has a max-width of 710px and user DOESN'T scroll over footer
+	else if (window.matchMedia('screen and (max-width: 710px)').matches && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 335) {
+		toggle.classList.remove('displayNone');
+	}
+
+	else {
+		toggle.classList.add('displayNone');
+	}
 });
+
+
+
 
 var toggleElementRight = document.querySelector('main section:last-of-type label div div a:last-of-type');
 var toggleElementLeft = document.querySelector('main section:last-of-type label div div a:first-of-type');

@@ -1,5 +1,6 @@
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // changing header on scroll
+
 
 document.querySelector('header div:last-of-type').classList.add('oooBg');
 document.querySelector('header div:last-of-type a').classList.add('fff');
@@ -7,8 +8,9 @@ document.querySelector('header details summary span').classList.add('oooBg');
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {
+
+	//page is scrolled
 	if (window.pageYOffset > 50) {
-		//page is scrolled
 		document.querySelector('header').classList.remove('transparent');
 		document.querySelector('header').classList.add('fffTransparent');
 	}
@@ -20,8 +22,10 @@ window.addEventListener('scroll', ()=> {
 
 
 
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // shoe care product sliders (shoecare-grid.html --> 1st section)
+
+
 //-(cleaning kit)----------------------------------------------------------------------------------
 var slider1st = document.querySelector('main section:first-of-type article:first-of-type img');
 var sliderShoeKit = ['shoeKit.jpg', 'shoeKit2.jpg', 'shoeKit3.jpg'];
@@ -139,10 +143,11 @@ back4.addEventListener('click', ()=> {
 
 
 
-//------------------------------------------------------------------------------------------------
-// toggle element in bottom of the screen
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// toggle element in bottom of the screen
 var toggle = document.querySelector('main section:last-of-type label');
+
 toggle.classList.remove('displayNone');
 
 //hidden when user scrolls to footer

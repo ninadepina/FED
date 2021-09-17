@@ -11,7 +11,7 @@
   --font-color: black;
 }
   
- html, body {
+html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -47,7 +47,7 @@ a {
 }
   
   
-  /* ------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------- */
   
 .animateLink {
   display: inline;
@@ -78,9 +78,9 @@ a {
   
   
   
-  /* ----- ---------------------- ----- */
-  /* ----- CLASSES FOR JAVASCRIPT ----- */
-  /* ----- ---------------------- ----- */
+/* ----- ---------------------- ----- */
+/* ----- CLASSES FOR JAVASCRIPT ----- */
+/* ----- ---------------------- ----- */
 .fff {
   color: white;
 }
@@ -340,16 +340,25 @@ section:first-of-type button {
   font-size: 1em;
   color: var(--font-color);
 }
-section:first-of-type article:first-of-type:hover button, section:first-of-type article:nth-child(3):hover button, section:first-of-type article:nth-child(4):hover button, section:first-of-type article:last-of-type:hover button {
+section:first-of-type article:first-of-type:hover button, 
+section:first-of-type article:nth-child(3):hover button, 
+section:first-of-type article:nth-child(4):hover button, 
+section:first-of-type article:last-of-type:hover button {
   opacity: 1;
   transition: 0.5s;
 }
 
-section:first-of-type article:first-of-type button:first-of-type, section:first-of-type article:nth-child(3) button:first-of-type, section:first-of-type article:nth-child(4) button:first-of-type, section:first-of-type article:last-of-type button:first-of-type {
+section:first-of-type article:first-of-type button:first-of-type, 
+section:first-of-type article:nth-child(3) button:first-of-type, 
+section:first-of-type article:nth-child(4) button:first-of-type, 
+section:first-of-type article:last-of-type button:first-of-type {
   left: 4%;
   top: 43%;
 }
-section:first-of-type article:first-of-type button:last-of-type, section:first-of-type article:nth-child(3) button:last-of-type, section:first-of-type article:nth-child(4) button:last-of-type,section:first-of-type article:last-of-type button:last-of-type {
+section:first-of-type article:first-of-type button:last-of-type, 
+section:first-of-type article:nth-child(3) button:last-of-type, 
+section:first-of-type article:nth-child(4) button:last-of-type,
+section:first-of-type article:last-of-type button:last-of-type {
   right: 4%;
   top: 43%;
 }
@@ -360,7 +369,8 @@ section:first-of-type article:first-of-type button:last-of-type, section:first-o
   }
 }
 @media only screen and (max-width: 375px) {
-  section:first-of-type h3, section:first-of-type p {
+  section:first-of-type h3, 
+  section:first-of-type p {
     width: 150px; 
     text-overflow: ellipsis;
     overflow: hidden; 
@@ -371,13 +381,18 @@ section:first-of-type article:first-of-type button:last-of-type, section:first-o
 
 
 
+
+/* ------ ------------ ------ */
+/* ------ LAST SECTION ------ */
+/* ------ ------------ ------ */
+
 section:last-of-type {
+  position: fixed;
   left: 50%;
   top: 93%;
   transform: translate(-50%, -50%);
-  position: fixed;
-  font-size: 0.8em;
   z-index: 100;
+  font-size: 0.8em;
 }
 
 
@@ -388,18 +403,17 @@ section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-typ
   font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:last-of-type {
-  font-weight: 300;
   z-index: 3;
+  font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:last-of-type {
   left: calc(50% + 0.25em);
 }
 section:last-of-type label div {
-  user-select: none;
-  max-width: 20em;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
+  max-width: 20em;
+  margin: 0 auto;
+  user-select: none;
   cursor: pointer;
 }
 section:last-of-type div div:first-of-type {
@@ -412,17 +426,18 @@ section:last-of-type div div:first-of-type {
   border: 1px solid rgb(221, 221, 221);
 }
 section:last-of-type div div:first-of-type a {
+  z-index: 3;
   padding: 1em 2em;
   text-align: center;
   font-weight: 300;
-  z-index: 3;
 }
 section:last-of-type div div:last-of-type {
-  z-index: 2;
-  top: 0.25em;
   position: absolute;
-  height: calc(100% - 0.5em);
+  top: 0.25em;
+  z-index: 2;
   width: calc(50% - 0.5em);
+  height: calc(100% - 0.5em);
+  padding-right: 7.8em;
   border-radius: 3rem;
   background-color: black;
   transition: 0.2s;
@@ -445,6 +460,22 @@ section:last-of-type div div:first-of-type p:last-of-type {
   z-index: 1;
   color: black;
 }
+
+@media only screen and (max-width: 440px) {
+  section:last-of-type div div:last-of-type {
+    padding-right: 0;
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  section:last-of-type div div:last-of-type {
+    width: 41%;
+  }
+}
+
+
+
+
 
 /* ----- ------------ */
 /* ----- FOOTER ----- */
@@ -496,14 +527,19 @@ footer details {
     display: block;
     margin-top: 4em;
   }
-  footer div:first-of-type,footer div:nth-child(6), footer div:nth-child(7) h3, footer div:nth-child(8), footer div:last-of-type {
+  footer div:first-of-type,
+  footer div:nth-child(6), 
+  footer div:nth-child(7) h3, 
+  footer div:nth-child(8), 
+  footer div:last-of-type {
     display: none;
   }
   footer div:nth-child(7) {
     margin-top: 2em;
   }
 
-  footer p, footer ul {
+  footer p, 
+  footer ul {
     max-width: 88vw;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);

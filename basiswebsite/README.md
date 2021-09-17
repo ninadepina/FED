@@ -239,7 +239,7 @@ hier screenshot(s) van je eindresultaat
 3. ...
 
 ### CSS
-1. bron 1
+1. user-select: https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
 2. bron 2
 3. ...
 

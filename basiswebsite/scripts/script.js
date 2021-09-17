@@ -1,8 +1,10 @@
-
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // changing header on scroll
 
-window.onload = ()=> { //adds classes after reload
+//adds classes after reload
+window.onload = ()=> { 
+	
+	//screen has max-width of 1000px
 	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
@@ -23,10 +25,12 @@ window.onload = ()=> { //adds classes after reload
 	}
 }
 
-window.onresize = function() {location.reload();} //auto reload after scaling the browser
+//auto reload after scaling the browser
+window.onresize = function() {location.reload();} 
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {
+
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
@@ -44,6 +48,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
 		document.querySelector('header details summary span').classList.add('oooBg');
 	}
+
 	//page is scrolled 
 	else if (window.pageYOffset > 50) {
 		document.querySelector('header').classList.remove('transparent');
@@ -60,6 +65,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('ooo');
 		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
 	}
+
 	else {
 		document.querySelector('header').classList.remove('fffTransparent');
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
@@ -79,6 +85,7 @@ window.addEventListener('scroll', ()=> {
 
 //-(shopping cart element)-
 window.addEventListener('scroll', ()=> { 
+
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 		document.querySelector('header div:last-of-type a').classList.remove('ooo');
@@ -86,6 +93,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:last-of-type').classList.remove('fffBg');
 		document.querySelector('header div:last-of-type').classList.add('oooBg');
 	}
+
 	//page is scrolled
 	else if (window.pageYOffset > 50) {
 		document.querySelector('header div:last-of-type a').classList.remove('ooo');
@@ -93,6 +101,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:last-of-type').classList.remove('fffBg');
 		document.querySelector('header div:last-of-type').classList.add('oooBg');
 	}
+
 	//screen has a max width of 1000px
 	else if (window.matchMedia('screen and (max-width: 1000px)').matches){
 		document.querySelector('header div:last-of-type a').classList.remove('fff');
@@ -100,6 +109,7 @@ window.addEventListener('scroll', ()=> {
 		document.querySelector('header div:last-of-type').classList.remove('oooBg');
 		document.querySelector('header div:last-of-type').classList.add('fffBg');
 	}
+
 	else {
 		document.querySelector('header div:last-of-type a').classList.remove('ooo');
 		document.querySelector('header div:last-of-type a').classList.add('fff');
@@ -108,8 +118,10 @@ window.addEventListener('scroll', ()=> {
 	}
 });
 
-//------------------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // shoe product sliders (index.html --> 3rd section)
+
+
 //-(1st product)----------------------------------------------------------------------------------
 var slider1 = document.querySelector('main section:nth-child(3) div:first-of-type img');
 var sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
@@ -137,6 +149,8 @@ terugKnop1.addEventListener('click', ()=> {
     onePaginaNr = onePaginaNr - 1 ;
 	onelaatFotoZien();
 } );
+
+
 //-(2nd product)----------------------------------------------------------------------------------
 var slider2 = document.querySelector('main section:nth-child(3) div:nth-child(3) img');
 var sliderFotos2 = ['shoe2slider1.png', 'shoe2slider2.png', 'shoe2slider3.png', 'shoe2slider4.png', 'shoe2slider5.png'];
@@ -164,6 +178,8 @@ terugKnop2.addEventListener('click', ()=> {
     twoPaginaNr = twoPaginaNr - 1 ;
 	twolaatFotoZien();
 } );
+
+
 //-(3rd product)----------------------------------------------------------------------------------
 var slider3 = document.querySelector('main section:nth-child(3) div:last-of-type img');
 var sliderFotos3 = ['shoe3slider1.png', 'shoe3slider2.png', 'shoe3slider3.png', 'shoe3slider4.png', 'shoe3slider5.png', 'shoe3slider6.png'];
