@@ -1,8 +1,9 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // changing header on scroll
 
-//adds classes after reload
-window.onload = ()=> { 
+
+//automatically runs function, adds classes to the header
+(function () { 
 	
 	//screen has max-width of 1000px
 	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
@@ -23,10 +24,19 @@ window.onload = ()=> {
 		document.querySelector('header div:last-of-type').classList.add('oooBg');
 		document.querySelector('header details summary span').classList.add('fffBg');
 	}
-}
+}());
 
-//auto reload after scaling the browser
-window.onresize = function() {location.reload();} 
+
+//automatically reloads page after scaling the browser
+(function () { 
+	
+	//screen has min-width of 376px
+	if (window.matchMedia('screen and (min-width: 376px)').matches) {
+		window.onresize = function() {location.reload();} 
+	}
+}());
+
+
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {

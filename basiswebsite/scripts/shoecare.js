@@ -1,26 +1,37 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// mouse scroll animation
+
+
+var h2 = document.querySelector('main section:first-of-type h2');
+var mouse = document.querySelector('main section:first-of-type div');
+
+//automatically runs function, adds animation when in desktop
+(function () { 
+
+	//screen has a min width of 1425px (desktop)
+	if (window.matchMedia('screen and (min-width: 1425px)').matches) {
+		mouse.classList.remove('displayNone');
+		h2.classList.add('displayNone');
+	}
+	else {
+		h2.classList.remove('displayNone');
+		mouse.classList.add('displayNone');
+	}
+}());
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // changing header on scroll
 
 
-//adds classes after reload
-window.onload = ()=> { 
-
-	//page has a max width of 1000px
-	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
-	}
-
+//automatically runs function, adds classes to the header
+(function () { 
+	
 	//page is scrolled and screen has a max width of 1000px
-    else if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
+    if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
         document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
 		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
@@ -32,6 +43,20 @@ window.onload = ()=> {
 		document.querySelector('header div:last-of-type').classList.add('fffBg');
 		document.querySelector('header details summary span').classList.add('fffBg');
     }
+	
+	//page has a max width of 1000px
+	else if (window.matchMedia('screen and (max-width: 1000px)').matches) {
+		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
+		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
+		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
+        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
+		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
+		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
+		document.querySelector('header div:last-of-type a').classList.add('ooo');
+		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
+		document.querySelector('header div:last-of-type').classList.add('fffBg');
+		document.querySelector('header details summary span').classList.add('fffBg');
+	}
 
 	else {
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
@@ -45,10 +70,18 @@ window.onload = ()=> {
 		document.querySelector('header div:last-of-type').classList.add('fffBg');
 		document.querySelector('header details summary span').classList.add('fffBg');
 	}
-}
+}());
 
-//auto reload after scaling the browser
-window.onresize = function() {location.reload();} 
+
+//automatically reloads page after scaling the browser
+(function () { 
+	
+	//screen has min-width of 376px
+	if (window.matchMedia('screen and (min-width: 376px)').matches) {
+		window.onresize = function() {location.reload();} 
+	}
+}());
+
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {
@@ -91,6 +124,10 @@ window.addEventListener('scroll', ()=> {
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('ooo');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('ooo');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('ooo');
+
+		//removes mouse animation and adds h2
+		h2.classList.remove('displayNone');
+		mouse.classList.add('displayNone');
 	}
 
 	else {
@@ -161,8 +198,6 @@ window.onload = ()=> {
 	}
 }
 
-//auto reload after scaling the browser
-window.onresize = function() {location.reload();} 
 
 
 //visibility changes of the toggle element when scrolled

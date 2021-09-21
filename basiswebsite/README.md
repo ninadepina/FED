@@ -235,13 +235,13 @@ hier screenshot(s) van je eindresultaat
 
 ### Html
 1. svg tag: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
-2. bron 2
+2. ...
 3. ...
 
 ### CSS
 1. user-select: https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
-2. bron 2
-3. ...
+2. mirror items: https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text
+3. multiple transforms: https://stackoverflow.com/questions/10765755/how-to-apply-multiple-transforms-in-css
 
 ### Javascript
 1. getElementsByTagName: https://stackoverflow.com/questions/17349081/change-style-of-all-elements-using-getelementsbytagname

@@ -2,9 +2,13 @@
 // changing header on scroll
 
 
-document.querySelector('header div:last-of-type').classList.add('oooBg');
-document.querySelector('header div:last-of-type a').classList.add('fff');
-document.querySelector('header details summary span').classList.add('oooBg');
+//automatically runs function, adds classes to the header
+(function () { 
+	document.querySelector('header div:last-of-type').classList.add('oooBg');
+	document.querySelector('header div:last-of-type a').classList.add('fff');
+	document.querySelector('header details summary span').classList.add('oooBg');
+}());
+
 
 //-(all elements)-
 window.addEventListener('scroll', ()=> {
@@ -152,11 +156,14 @@ toggle.classList.remove('displayNone');
 
 //hidden when user scrolls to footer
 window.addEventListener('scroll', ()=> {
-	if (window.pageYOffset > 840) {
-		toggle.classList.add('displayNone');
+	if (window.matchMedia('screen and (min-width: 1001px)').matches && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 150) {
+		toggle.classList.remove('displayNone');
+	}
+	else if (window.matchMedia('screen and (max-width: 1000px)').matches && (window.innerHeight + window.pageYOffset) < document.body.offsetHeight - 335) {
+		toggle.classList.remove('displayNone');
 	}
 	else {
-		toggle.classList.remove('displayNone');
+		toggle.classList.add('displayNone');
 	}
 });
 

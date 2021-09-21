@@ -47,7 +47,21 @@ a {
   color: var(--font-color);
   text-decoration: none;
 }
-
+label {
+  font-family: var(--main-font);
+  font-size: 0.8em;
+  font-weight: 300;
+} 
+input[type=email] {
+  font-family: var(--main-font);
+  font-size: 0.8em;
+  font-weight: 300;
+} 
+input[type=submit] {
+  font-family: var(--main-font);
+  font-size: 0.8em;
+  font-weight: 600;
+} 
 
 /* ------------------------------------------------------------------------------------------ */
 
@@ -586,6 +600,9 @@ footer div:first-of-type {
 footer details {
   display: none;
 }
+footer form {
+  display: none;
+}
 
 
 /* ----- ------------------ ----- */
@@ -595,7 +612,7 @@ footer details {
 @media only screen and (max-width: 1000px) {
   footer {
     display: block;
-    margin-top: 4em;
+    margin: 4em 0 2em 0;
   }
   footer div:first-of-type,
   footer div:nth-child(6), 
@@ -649,6 +666,31 @@ footer details {
     position: absolute;
     right: 4%;
     font-size: 1.2em;
+  }
+
+  footer form {
+    display: block;
+    margin-left: 2em;
+  }
+  footer form label[for=email] {
+    line-height: 1.3em;
+    margin-right: 1em;
+  }
+  
+  footer form input[type=email] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    line-height: 1.3em;
+    margin-right: 1em;
+  }
+  footer form input[type=email]:focus {
+    border-bottom: 1px solid black;
+  }
+  footer form input[type=submit] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    line-height: 1.3em;
   }
 }
 

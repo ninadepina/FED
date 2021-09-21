@@ -341,6 +341,40 @@ section:first-of-type h2 {
   }
 }
 
+@keyframes scrollDown {
+	0%, 20% {
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		opacity: 1;
+	}
+	100% {
+		transform: translate3d(0, 25px, 0);
+		opacity: 0;
+	}
+}
+
+section:first-of-type div svg g g ellipse {
+	animation: scrollDown 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+}
+
+section:first-of-type div svg {
+  /* width: 20px; */
+  width: 2em;
+  height: 2em;
+}
+
+section:first-of-type svg g {
+  fill: rgba(0, 0, 0, 0.603);
+}
+
+section:first-of-type div {
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 
 /* ----- -------------- ----- */
@@ -604,12 +638,12 @@ section:nth-child(7) {
   padding-right: 2em;
   display: grid; 
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
-  grid-template-rows: 1fr 0.25fr; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1.5fr 0.5fr; 
   gap: 0 2em; 
   grid-template-areas: 
-    "imgInsoles imgInsoles imgInsoles textInsoles textInsoles textInsoles"
-    "imgInsoles imgInsoles imgInsoles productInsoles . ."; 
+    "imgInsoles textInsoles"
+    "imgInsoles productInsoles"; 
 }
 section:nth-child(7) img:first-of-type {
   grid-area: imgInsoles;
@@ -617,7 +651,7 @@ section:nth-child(7) img:first-of-type {
 }
 section:nth-child(7) img:last-of-type {
   grid-area: productInsoles;
-  width: 100%;
+  width: 33%;
 }
 section:nth-child(7) div {
   grid-area: textInsoles;
@@ -629,17 +663,20 @@ section:nth-child(7) div {
     padding-right: 2em;
     display: grid; 
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 0.25fr 1fr 1fr 0.4fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 0.5fr 2fr 0.5fr; 
     gap: 0 2em; 
     grid-template-areas: 
-      "textInsoles textInsoles textInsoles"
-      "imgInsoles imgInsoles imgInsoles"
-      "imgInsoles imgInsoles imgInsoles"
-      ". . productInsoles"; 
-  }
+    "textInsoles"
+    "imgInsoles"
+    "productInsoles"; 
+}
   section:nth-child(7) div {
     margin-bottom: 4em;
+  }
+  section:nth-child(7) img:last-of-type {
+    justify-self: flex-end;
+    margin-top: 2em;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -764,6 +801,7 @@ section:last-of-type label div {
   cursor: pointer;
 }
 section:last-of-type div div:first-of-type {
+  min-width: 215px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 3em;

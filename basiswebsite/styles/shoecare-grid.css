@@ -43,6 +43,8 @@ li {
 } 
 a {
   font-family: var(--main-font);
+  font-size: 0.8em;
+  color: var(--font-color);
   text-decoration: none;
 }
   
@@ -394,7 +396,9 @@ section:last-of-type {
   z-index: 100;
   font-size: 0.8em;
 }
-
+section:last-of-type p, section:last-of-type a {
+  font-size: 1em;
+}
 
 section:last-of-type input[type="checkbox"] {
   display: none;
@@ -417,6 +421,7 @@ section:last-of-type label div {
   cursor: pointer;
 }
 section:last-of-type div div:first-of-type {
+  min-width: 215px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 3em;
@@ -459,18 +464,6 @@ section:last-of-type div div:first-of-type p:last-of-type {
   right: 2.9em;
   z-index: 1;
   color: black;
-}
-
-@media only screen and (max-width: 440px) {
-  section:last-of-type div div:last-of-type {
-    padding-right: 0;
-    width: 45%;
-  }
-}
-@media only screen and (max-width: 375px) {
-  section:last-of-type div div:last-of-type {
-    width: 41%;
-  }
 }
 
 
