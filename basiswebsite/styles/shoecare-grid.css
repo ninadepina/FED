@@ -149,6 +149,28 @@ header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
 }
+header svg path {
+  animation: etq 6s infinite;
+	transform-origin: center bottom;
+}
+header svg path:nth-of-type(1) {
+  animation-delay: 0s;
+}
+header svg path:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+header svg path:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+  
+@keyframes etq { /* bouncing logo */
+	0%, 25%, 100% { transform: none; }
+	5% { transform: scale(1.2, 0.8); }
+	10% { transform: scale(0.8, 1.5) translateY(-0.25em); }
+	15% { transform: scale(1, 0.7); }
+	20% { transform: scale(0.9, 1.1); }
+}
+
 header a {
   color: var(--font-color);
   font-size: 0.8em;
@@ -475,6 +497,7 @@ section:last-of-type div div:first-of-type p:last-of-type {
 /* ----- ------ ----- */
 
 footer {
+  position: relative;
   display: flex;
   margin-top: 10em;
   padding-bottom: 2em;
@@ -511,6 +534,43 @@ footer details {
 }
 
 
+/* ----- twitter animation ----- */
+footer svg {
+	position: absolute;
+  bottom: 30%;
+  right: 8vw;
+	height: 3vh;
+	transform: rotate(20deg);
+}
+
+footer svg path:first-of-type { /* 1st wing */
+	fill: #5da8dc;
+}
+footer svg path:nth-child(2) { /* 2nd wing */
+	fill: #5da8dc;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-out infinite alternate;
+}	
+footer svg path:last-of-type { /* body of bird */
+	fill: #c4dff2;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-in infinite alternate;
+}	 	
+footer div:last-of-type ul:hover svg {
+  animation: vliegen 10s ease-out ;
+}
+
+@keyframes flapperen { /* flapping wings */
+  50% { transform: scaleX(-1) rotate(-45deg) translate(-40px,-40px); }
+}
+
+@keyframes vliegen { /* flying across screen */
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(2em, -2em); }
+  15% { transform:  translate(2em, -2em) scale(-1, 1); }
+  100% { transform: scale(-1, 1) translate(84em, -6em); }
+}
+
 /* ----- ------------------ ----- */
 /* ----- FOOTER 'HAMBURGER' ----- */
 /* ----- ------------------ ----- */
@@ -534,7 +594,6 @@ footer details {
   footer p, 
   footer ul {
     max-width: 88vw;
-    padding-bottom: 20px;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
   footer div:nth-child(7) ul {

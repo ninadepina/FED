@@ -155,7 +155,29 @@ header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
 }
+header svg path {
+  animation: etq 6s infinite;
+	transform-origin: center bottom;
+}
+header svg path:nth-of-type(1) {
+  animation-delay: 0s;
+}
+header svg path:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+header svg path:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
   
+@keyframes etq { /* bouncing logo */
+	0%, 25%, 100% { transform: none; }
+	5% { transform: scale(1.2, 0.8); }
+	10% { transform: scale(0.8, 1.5) translateY(-0.25em); }
+	15% { transform: scale(1, 0.7); }
+	20% { transform: scale(0.9, 1.1); }
+}
+  
+
 header nav {
   /* background: blue; */
   display: flex;
@@ -342,16 +364,9 @@ section:first-of-type h2 {
 }
 
 @keyframes scrollDown {
-	0%, 20% {
-		transform: translate3d(0, 0, 0);
-	}
-	25% {
-		opacity: 1;
-	}
-	100% {
-		transform: translate3d(0, 25px, 0);
-		opacity: 0;
-	}
+	0%, 20% { transform: translate3d(0, 0, 0); }
+	25% { opacity: 1; }
+	100% { transform: translate3d(0, 25px, 0); opacity: 0; }
 }
 
 section:first-of-type div svg g g ellipse {
@@ -454,7 +469,7 @@ section:nth-child(3) h2 {
     margin-left: 2em;
     padding-right: 2em;
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: 1fr 1fr 0.25fr 0.6fr 0.6fr;
     gap: 0 2em; 
     grid-template-areas: 
@@ -498,7 +513,7 @@ section:nth-child(4) {
   margin-top: 4em;
   padding-right: 2em;
   display: grid; 
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: 0.25fr; 
   grid-template-areas: 
     ". textAndButton"; 
@@ -521,27 +536,15 @@ section:nth-child(4) div a {
 section:nth-child(4) div a:hover {
   color: white;
   box-shadow: 0 5px 8px rgba(33,150,243,0.25);
-	background: #00BCD4;
-	background: -webkit-linear-gradient(left,#00BCD4 0%,#2196F3 100%);
 	background: linear-gradient(to right,#00BCD4 0%,#2196F3 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BCD4',endColorstr='#2196F3',GradientType=1);
 	background-size: 400%;
-	-webkit-animation: Gradient 1s ease infinite;
-	animation: Gradient 1s ease infinite;
+	animation: gradient 1.5 ease infinite;
+  -webkit-animation: gradient 1.5s ease infinite;
 }
 
-@keyframes Gradient {
-	0% {
-		background-position:0 50%
-	}
-	
-	50% {
-		background-position:100% 50%
-	}
-	
-	100% {
-		background-position:0 50%
-	}
+@keyframes gradient {
+	0%, 100% { background-position: 0 50%; }
+	50% { background-position: 100% 50%; }
 }
 
 @media only screen and (max-width: 765px) {
@@ -556,10 +559,6 @@ section:nth-child(4) div a:hover {
   }
   section:nth-child(4) div a {
     width: 100%;
-  }
-}
-@media only screen and (max-width: 765px) {
-  section:nth-child(4) div a {
     font-size: 0.6em;
     padding: 1.2em 0;
     text-align: center;
@@ -594,7 +593,7 @@ section:nth-child(6) {
   padding-right: 2em;
   display: grid; 
   align-items: center;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: 1fr; 
   gap: 0 2em; 
   grid-template-areas: 
@@ -638,7 +637,7 @@ section:nth-child(7) {
   padding-right: 2em;
   display: grid; 
   align-items: center;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: 1.5fr 0.5fr; 
   gap: 0 2em; 
   grid-template-areas: 
@@ -697,7 +696,7 @@ section:nth-child(8) {
   margin-top: 4em;
   padding-right: 2em;
   display: grid; 
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 0.25fr; 
   grid-template-areas: 
     ". text"; 
@@ -755,7 +754,7 @@ section:nth-child(9) img:last-of-type {
     display: grid; 
     align-items: center;
     grid-template-columns: 0.6fr 0.4fr; 
-    grid-template-rows: 0.8fr 0.8fr; 
+    grid-template-rows: repeat(2, 0.8fr); 
     gap: 0 2em; 
     grid-template-areas: 
       "imgArch imgArch"
@@ -803,7 +802,7 @@ section:last-of-type label div {
 section:last-of-type div div:first-of-type {
   min-width: 215px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   border-radius: 3em;
   transition: 0.2s;
   background: white;
@@ -854,6 +853,7 @@ section:last-of-type div div:first-of-type p:last-of-type {
 /* ----- ------ ----- */
 
 footer {
+  position: relative;
   display: flex;
   margin-top: 10em;
   padding-bottom: 2em;
@@ -890,6 +890,43 @@ footer details {
 }
 
 
+/* ----- twitter animation ----- */
+footer svg {
+	position: absolute;
+  bottom: 30%;
+  right: 8vw;
+	height: 3vh;
+	transform: rotate(20deg);
+}
+
+footer svg path:first-of-type { /* 1st wing */
+	fill: #5da8dc;
+}
+footer svg path:nth-child(2) { /* 2nd wing */
+	fill: #5da8dc;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-out infinite alternate;
+}	
+footer svg path:last-of-type { /* body of bird */
+	fill: #c4dff2;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-in infinite alternate;
+}	 	
+footer div:last-of-type ul:hover svg {
+  animation: vliegen 10s ease-out ;
+}
+
+@keyframes flapperen { /* flapping wings */
+  50% { transform: scaleX(-1) rotate(-45deg) translate(-40px,-40px); }
+}
+
+@keyframes vliegen { /* flying across screen */
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(2em, -2em); }
+  15% { transform:  translate(2em, -2em) scale(-1, 1); }
+  100% { transform: scale(-1, 1) translate(84em, -6em); }
+}
+
 
 /* ----- ------------------ ----- */
 /* ----- FOOTER 'HAMBURGER' ----- */
@@ -914,7 +951,6 @@ footer details {
   footer p, 
   footer ul {
     max-width: 88vw;
-    padding-bottom: 20px;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
   footer div:nth-child(7) ul {

@@ -158,11 +158,35 @@ header {
   margin: 0.8em 0 0 0.8em;
   padding: 0.6em 1.2em 0.4em 0.6em;
 }
+
+/* etq logo */
 header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
 }
+header svg path {
+  animation: etq 6s infinite;
+	transform-origin: center bottom;
+}
+header svg path:nth-of-type(1) {
+  animation-delay: 0s;
+}
+header svg path:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+header svg path:nth-of-type(4) {
+  animation-delay: 0.4s;
+}
+@keyframes etq { /* bouncing logo */
+	0%, 25%, 100% { transform: none; }
+	5% { transform: scale(1.2, 0.8); }
+	10% { transform: scale(0.8, 1.5) translateY(-0.25em); }
+	15% { transform: scale(1, 0.7); }
+	20% { transform: scale(0.9, 1.1); }
+}
 
+
+/* header for screen min-width: 1000px */
 header nav {
   /* background: blue; */
   display: flex;
@@ -361,7 +385,7 @@ section:first-of-type div {
 
 section:first-of-type h2 em {
   font-style: normal;
-  background-image: linear-gradient(120deg, #63c4fd 0%, #3de295 100%);
+  background: linear-gradient(120deg, #63c4fd 0%, #3de295 100%);
   background-repeat: no-repeat;
   background-size: 100% 0.2em;
   background-position: 0 88%;
@@ -566,6 +590,7 @@ section:nth-child(4) h3 {
 /* ----- ------ ----- */
 
 footer {
+  position: relative;
   display: flex;
   margin-top: 10em;
   padding-bottom: 2em;
@@ -603,6 +628,46 @@ footer details {
 footer form {
   display: none;
 }
+
+
+/* ----- twitter animation ----- */
+footer svg {
+	position: absolute;
+  bottom: 30%;
+  right: 8vw;
+	height: 3vh;
+	transform: rotate(20deg);
+}
+
+footer svg path:first-of-type { /* 1st wing */
+	fill: #5da8dc;
+}
+footer svg path:nth-child(2) { /* 2nd wing */
+	fill: #5da8dc;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-out infinite alternate;
+}	
+footer svg path:last-of-type { /* body of bird */
+	fill: #c4dff2;
+	transform-origin: center;
+	animation: flapperen 0.4s ease-in infinite alternate;
+}	 	
+footer div:last-of-type ul:hover svg {
+  animation: vliegen 10s ease-out ;
+}
+
+@keyframes flapperen { /* flapping wings */
+  50% { transform: scaleX(-1) rotate(-45deg) translate(-40px,-40px); }
+}
+
+@keyframes vliegen { /* flying across screen */
+  0% { transform: translate(0, 0); }
+  10% { transform: translate(2em, -2em); }
+  15% { transform:  translate(2em, -2em) scale(-1, 1); }
+  100% { transform: scale(-1, 1) translate(84em, -6em); }
+}
+
+
 
 
 /* ----- ------------------ ----- */
