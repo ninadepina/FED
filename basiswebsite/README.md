@@ -22,7 +22,7 @@ Nina Vens
 Rood
 
 #### Je focus:
-Responsive
+Responsive (eigenlijk allebei)
  
 </details>
 
@@ -64,7 +64,6 @@ shoecare
 ### de hele pagina: 
 <img src="images/breakdownETQ.png" width="375px" alt="breakdown van de hele pagina">
 
-
 </details>
 
 
@@ -78,24 +77,20 @@ shoecare
 
 ### Stand van zaken
 Als ik eenmaal begin met coderen/programmeren pak ik het weer snel op.
--
+---
 Stand van zaken:
 - homepagina is af (responsive en wel)
 - nu verder met de tweede pagina
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| Nina (ik)      | Mick               | Sarah            | 
+| Nina (ik)      | Student 2          | Student 3        | 
 | ---            | ---                | ---              | 
-| x              | Uitlijnen tekst in | ?                | 
+| x              | Uitlijnen tekst in | x                | 
 |                | de hoogte          |                  | 
 |                |                    |                  | 
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
 - loop prima op schema
 - op school werken kan ook
 - handig om met wat studenten samen wat te doen
@@ -113,26 +108,22 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+- alle pagina's zijn af 
+- bezig met wat extra dingen toevoegen
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
+| Nina (ik)      | Student 2          | Student 3        | 
+| ---            | ---                | ---              | 
+| Intersection   | Semantische code   | (ziek)           | 
+| observer       | schrijven          |                  | 
+|                |                    |                  | 
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- het gaat goed
+- kijken of css bestand wat kleiner kan (dingen samenvoegen)
+- nu bezig met het uitvogelen van een intersection observer
 
 </details>
 
