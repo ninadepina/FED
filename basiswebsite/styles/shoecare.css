@@ -151,6 +151,8 @@ header {
   margin: 0.8em 0 0 0.8em;
   padding: 0.6em 1.2em 0.4em 0.6em;
 }
+
+/* etq logo */
 header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
@@ -178,6 +180,7 @@ header svg path:nth-of-type(4) {
 }
   
 
+/* header for screen min-width: 1000px */
 header nav {
   /* background: blue; */
   display: flex;

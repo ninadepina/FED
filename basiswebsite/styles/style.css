@@ -177,6 +177,7 @@ header svg path:nth-of-type(2) {
 header svg path:nth-of-type(4) {
   animation-delay: 0.4s;
 }
+  
 @keyframes etq { /* bouncing logo */
 	0%, 25%, 100% { transform: none; }
 	5% { transform: scale(1.2, 0.8); }
