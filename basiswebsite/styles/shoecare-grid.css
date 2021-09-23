@@ -1,15 +1,15 @@
 *, *::after, *::before {
   box-sizing: border-box;  
   outline: none;
+  font-family: 'Urbanist', sans-serif;
 }
 *::selection {
   background: #83dde077;
 }
   
-:root {
-  --main-font: 'Urbanist', sans-serif;
-  --font-color: black;
-}
+/* :root {
+
+} */
   
 html, body {
   margin: 0;
@@ -18,33 +18,28 @@ html, body {
 }
 h1 {
   position: absolute;
-  left: -1000px;
+  left: -1000px; /* makes it not visible on the screen but still visible in html for screenreaders*/
 }
 h2 {
-  font-family: var(--main-font);
   font-size: 1.6em;
   font-weight: 400;
 }
 h3 {
-  font-family: var(--main-font);
   font-size: 0.8em;
   font-weight: 600;
 }
 p {
-  font-family: var(--main-font);
   font-size: 1em;
   font-weight: 300;
 }
 li {
-  font-family: var(--main-font);
   font-size: 0.6em;
   list-style-type: none;
   font-weight: 300;
 } 
 a {
-  font-family: var(--main-font);
   font-size: 0.8em;
-  color: var(--font-color);
+  color: black;
   text-decoration: none;
 }
   
@@ -56,7 +51,7 @@ a {
   position: relative;
   overflow: hidden;
 }
-.animateLink:after {
+.animateLink::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -64,13 +59,13 @@ a {
   bottom: -5px;
   width: 0;
   height: 2%;
-  background: var(--font-color);
+  background: black;
   transition-property: width;
   transition: 0.3s ease-out;
 }
-.animateLink:hover:after,
-.animateLink:focus:after,
-.animateLink:active:after {
+.animateLink:hover::after,
+.animateLink:focus::after,
+.animateLink:active::after {
   left: 0;
   right: auto;
   width: 100%;
@@ -86,35 +81,20 @@ a {
 .fff {
   color: white;
 }
-.fff::after {
-  background: white;
-}
 .fffTransparent {
   background: rgba(255, 255, 255, 0.925);
 }
-.fffBg{
-  background: white;
-}
-.fffBg::before {
-  background: white;
-}
-.fffBg::after {
+.fff::after, .fffBg, .fffBg::before, .fffBg::after {
   background: white;
 }
 .fffFill {
   fill: white;
 }
-  
+
 .ooo {
   color: black;
 }
-.oooBg {
-  background: black;
-}
-.oooBg::before {
-  background: black;
-}
-.oooBg::after {
+.oooBg, .oooBg::before, .oooBg::after {
   background: black;
 }
 .oooFill {
@@ -127,7 +107,6 @@ a {
 .transparent {
   background: transparent;
 }
-  
 .displayNone {
   display: none;
 } 
@@ -148,6 +127,7 @@ header {
 header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
+  overflow: visible;
 }
 header svg path {
   animation: etq 6s infinite;
@@ -172,12 +152,10 @@ header svg path:nth-of-type(4) {
 }
 
 header a {
-  color: var(--font-color);
   font-size: 0.8em;
 }
   
 header nav {
-  /* background: blue; */
   display: flex;
   flex-direction: row;
   width: 86vw;
@@ -193,19 +171,16 @@ header nav {
 header nav ul {
   display: flex;
   justify-content: space-between;
-  /* background: blue; */
   padding: 0;
   width: 210px;
 }
 header nav ul li {
   flex-direction: row;
 }
-header nav ul:first-of-type li a {
+header nav ul li a {
   font-size: 1.6em;
 }
-header nav ul:last-of-type li a {
-  font-size: 1.6em;
-}
+
 header div:last-of-type {
   width: 25px;
   height: 25px;
@@ -252,7 +227,6 @@ header details {
   header summary {
     width: 35px;
     height: 35px;
-    /* background: red; */
     list-style-type: none;
     cursor: pointer;
   }
@@ -269,21 +243,19 @@ header details {
     transform: translate(-50%, -50%);
     border-radius: 4px;
   }
-  header summary span:before {
+  header summary span::before,
+  header summary span::after {
     content: '';
     position: absolute;
-    top: 6px;
     width: 18px;
     height: 2.6px;
     border-radius: 4px;
   }
+  header summary span::before {
+    top: 6px;
+  }
   header summary span::after {
-    content: '';
-    position: absolute;
     top: -6px;
-    width: 18px;
-    height: 2.6px;
-    border-radius: 4px;  
   }
   
   header nav {
@@ -311,7 +283,6 @@ header details {
 /* ---------------------- */
 
 section {
-  color: var(--font-color);
   letter-spacing: 2px;
 }
 
@@ -362,7 +333,6 @@ section:first-of-type button {
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   font-size: 1em;
-  color: var(--font-color);
 }
 section:first-of-type article:first-of-type:hover button, 
 section:first-of-type article:nth-child(3):hover button, 
@@ -425,12 +395,11 @@ section:last-of-type p, section:last-of-type a {
 section:last-of-type input[type="checkbox"] {
   display: none;
 }
-section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:first-of-type {
+section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a {
   font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:last-of-type {
   z-index: 3;
-  font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:last-of-type {
   left: calc(50% + 0.25em);
@@ -475,17 +444,16 @@ section:last-of-type div div:last-of-type {
 .right {
   transform: translateX(8.6em);
 }
-section:last-of-type div div:first-of-type p:first-of-type {
+section:last-of-type div div:first-of-type p {
   position: absolute;
-  left: 2em;
   z-index: 1;
   color: black;
 }
+section:last-of-type div div:first-of-type p:first-of-type {
+  left: 2em;
+}
 section:last-of-type div div:first-of-type p:last-of-type {
-  position: absolute;
   right: 2.9em;
-  z-index: 1;
-  color: black;
 }
 
 
@@ -591,8 +559,7 @@ footer div:last-of-type ul:hover svg {
     margin-top: 2em;
   }
 
-  footer p, 
-  footer ul {
+  footer p, footer ul {
     max-width: 88vw;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
@@ -609,7 +576,6 @@ footer div:last-of-type ul:hover svg {
     max-width: 100%;
     width: 94vw;
     padding: 20px 0;
-    font-family: var(--main-font);
     font-size: 0.8em;
     font-weight: 600;
     list-style-type: none;
@@ -619,17 +585,17 @@ footer div:last-of-type ul:hover svg {
     display: none
   }
   
-  footer summary::after {
-    content: ' \002B';
+  footer summary::after,
+  footer details[open] summary::after {
     position: absolute;
     right: 4%;
     font-size: 1.2em;
   }
-  footer details[open] summary:after {
-    content: " \002D";
-    position: absolute;
-    right: 4%;
-    font-size: 1.2em;
+  footer summary::after {
+    content: ' \002B'; /* plus sign */
+  }
+  footer details[open] summary::after {
+    content: " \002D"; /* minus sign */
   }
 }
 

@@ -7,9 +7,6 @@
 	
 	//screen has max-width of 1000px
 	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
 		document.querySelector('header div:last-of-type a').classList.add('ooo');
 		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
 		document.querySelector('header div:last-of-type').classList.add('fffBg');

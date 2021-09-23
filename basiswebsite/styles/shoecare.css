@@ -1,15 +1,15 @@
 *, *::after, *::before {
   box-sizing: border-box;  
   outline: none;
+  font-family: 'Urbanist', sans-serif;
 }
 *::selection {
   background: #83dde077;
 }
   
-:root {
-  --main-font: 'Urbanist', sans-serif;
-  --font-color: black;
-}
+/* :root {
+
+} */
   
 html, body {
   margin: 0;
@@ -18,7 +18,7 @@ html, body {
 }
 h1 {
   position: absolute;
-  left: -1000px;
+  left: -1000px; /* makes it not visible on the screen but still visible in html for screenreaders*/
 }
 h2 {
   font-family: var(--main-font);
@@ -61,7 +61,7 @@ button {
   position: relative;
   overflow: hidden;
 }
-.animateLink:after {
+.animateLink::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -73,9 +73,9 @@ button {
   transition-property: width;
   transition: 0.3s ease-out;
 }
-.animateLink:hover:after,
-.animateLink:focus:after,
-.animateLink:active:after {
+.animateLink:hover::after,
+.animateLink:focus::after,
+.animateLink:active::after {
   left: 0;
   right: auto;
   width: 100%;
@@ -91,35 +91,20 @@ button {
 .fff {
   color: white;
 }
-.fff::after {
-  background: white;
-}
 .fffTransparent {
   background: rgba(255, 255, 255, 0.925);
 }
-.fffBg{
-  background: white;
-}
-.fffBg::before {
-  background: white;
-}
-.fffBg::after {
+.fff::after, .fffBg, .fffBg::before, .fffBg::after {
   background: white;
 }
 .fffFill {
   fill: white;
 }
-  
+
 .ooo {
   color: black;
 }
-.oooBg {
-  background: black;
-}
-.oooBg::before {
-  background: black;
-}
-.oooBg::after {
+.oooBg, .oooBg::before, .oooBg::after {
   background: black;
 }
 .oooFill {
@@ -132,7 +117,6 @@ button {
 .transparent {
   background: transparent;
 }
-
 .displayNone {
   display: none;
 }
@@ -156,6 +140,7 @@ header {
 header svg {
   width: 90px;
   margin: 0.2em 0 0 1em;
+  overflow: visible;
 }
 header svg path {
   animation: etq 6s infinite;
@@ -182,7 +167,6 @@ header svg path:nth-of-type(4) {
 
 /* header for screen min-width: 1000px */
 header nav {
-  /* background: blue; */
   display: flex;
   flex-direction: row;
   width: 86vw;
@@ -198,17 +182,13 @@ header nav {
 header nav ul {
   display: flex;
   justify-content: space-between;
-  /* background: blue; */
   padding: 0;
   width: 210px;
 }
 header nav ul li {
   flex-direction: row;
 }
-header nav ul:first-of-type li a {
-  font-size: 1.6em;
-}
-header nav ul:last-of-type li a {
+header nav ul li a {
   font-size: 1.6em;
 }
 header div:last-of-type {
@@ -257,7 +237,6 @@ header details {
   header summary {
     width: 35px;
     height: 35px;
-    /* background: red; */
     list-style-type: none;
     cursor: pointer;
   }
@@ -274,21 +253,19 @@ header details {
     transform: translate(-50%, -50%);
     border-radius: 4px;
   }
-  header summary span:before {
+  header summary span::before,
+  header summary span::after {
     content: '';
     position: absolute;
-    top: 6px;
     width: 18px;
     height: 2.6px;
     border-radius: 4px;
   }
+  header summary span::before {
+    top: 6px;
+  }
   header summary span::after {
-    content: '';
-    position: absolute;
     top: -6px;
-    width: 18px;
-    height: 2.6px;
-    border-radius: 4px;  
   }
   
   header nav {
@@ -316,7 +293,6 @@ header details {
 /* ---------------------- */
 
 section {
-  color: var(--font-color);
   letter-spacing: 2px;
 }
   
@@ -377,7 +353,6 @@ section:first-of-type div svg g g ellipse {
 }
 
 section:first-of-type div svg {
-  /* width: 20px; */
   width: 2em;
   height: 2em;
 }
@@ -458,10 +433,8 @@ section:nth-child(3) img:last-of-type {
   grid-area: img3; 
   width: 100%;
 }
+section:nth-child(3) h2, 
 section:nth-child(3) h3 { 
-  grid-area: text; 
-}
-section:nth-child(3) h2 { 
   grid-area: text; 
 }
 
@@ -785,12 +758,11 @@ section:last-of-type p, section:last-of-type a {
 section:last-of-type input[type="checkbox"] {
   display: none;
 }
-section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:first-of-type {
+section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a {
   font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:first-of-type a:last-of-type {
   z-index: 3;
-  font-weight: 300;
 }
 section:last-of-type input[type="checkbox"]:checked ~ label div div:last-of-type {
   left: calc(50% + 0.25em);
@@ -835,17 +807,16 @@ section:last-of-type div div:last-of-type {
 .right {
   transform: translateX(8.6em);
 }
-section:last-of-type div div:first-of-type p:first-of-type {
+section:last-of-type div div:first-of-type p {
   position: absolute;
-  left: 2em;
   z-index: 1;
   color: black;
 }
+section:last-of-type div div:first-of-type p:first-of-type {
+  left: 2em;
+}
 section:last-of-type div div:first-of-type p:last-of-type {
-  position: absolute;
   right: 2.9em;
-  z-index: 1;
-  color: black;
 }
 
 
@@ -951,8 +922,7 @@ footer div:last-of-type ul:hover svg {
     margin-top: 2em;
   }
     
-  footer p, 
-  footer ul {
+  footer p, footer ul {
     max-width: 88vw;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
@@ -980,17 +950,17 @@ footer div:last-of-type ul:hover svg {
     display: none
   }
       
-  footer summary::after {
-    content: ' \002B';
+  footer summary::after,
+  footer details[open] summary::after {
     position: absolute;
     right: 4%;
     font-size: 1.2em;
   }
-  footer details[open] summary:after {
-    content: " \002D";
-    position: absolute;
-    right: 4%;
-    font-size: 1.2em;
+  footer summary::after {
+    content: ' \002B'; /* plus sign */
+  }
+  footer details[open] summary::after {
+    content: " \002D"; /* minus sign */
   }
 }
 
