@@ -1,5 +1,15 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// changing header on scroll
+/*****************************/
+/* changing header on scroll */
+/*****************************/
+
+//all items in header
+const header = document.querySelector('header');
+const logo = document.querySelector('header div:first-of-type svg');
+let navLeft = document.querySelectorAll('header nav ul:first-of-type a'), i;
+const itemcount = document.querySelector('header div:last-of-type a');
+const itemcountBg = document.querySelector('header div:last-of-type');
+const hamburgerMenu = document.querySelector('header details summary span');
 
 
 //automatically runs function, adds classes to the header
@@ -7,19 +17,20 @@
 	
 	//screen has max-width of 1000px
 	if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
+		logo.classList.add('fffFill');
+		itemcount.classList.add('ooo');
+		itemcountBg.classList.add('fffBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 	else {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
+		for (i = 0; i < navLeft.length; ++i) { //loop to change all elements in 'navLeft'
+			navLeft[i].classList.add('fff');
+		}
+
+		logo.classList.add('fffFill');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.add('oooBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 }());
 
@@ -40,53 +51,51 @@ window.addEventListener('scroll', ()=> {
 
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('ooo');
 
-		document.querySelector('header').classList.remove('transparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:first-of-type svg').classList.remove('fffFill');	
-		document.querySelector('header details summary span').classList.remove('fffBg');
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('ooo', 'fff');
+		}
+	
+		header.classList.remove('transparent');
+		header.classList.add('fffTransparent');
 
-		document.querySelector('header').classList.add('fffTransparent');
-		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
-		document.querySelector('header details summary span').classList.add('oooBg');
+		logo.classList.remove('fffFill');	
+		logo.classList.add('oooFill');
+
+		hamburgerMenu.classList.remove('fffBg');
+		hamburgerMenu.classList.add('oooBg');
 	}
 
 	//page is scrolled 
 	else if (window.pageYOffset > 50) {
-		document.querySelector('header').classList.remove('transparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:first-of-type svg').classList.remove('fffFill');
-		document.querySelector('header details summary span').classList.remove('fffBg');
-		document.querySelector('header details summary span').classList.remove('oooBg');
+		header.classList.remove('transparent');
+		header.classList.add('fffTransparent');
 
-		document.querySelector('header').classList.add('fffTransparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('fff');
+			navLeft[i].classList.add('ooo');
+		}
+
+		logo.classList.remove('fffFill');
+		logo.classList.add('oooFill');
+
+		hamburgerMenu.classList.remove('fffBg', 'oooBg');
 	}
 
 	else {
-		document.querySelector('header').classList.remove('fffTransparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:first-of-type svg').classList.remove('oooFill');
-		document.querySelector('header details summary span').classList.remove('oooBg');
+		header.classList.remove('fffTransparent');
+		header.classList.add('transparent');
 
-		document.querySelector('header').classList.add('transparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');	
-		document.querySelector('header details summary span').classList.add('fffBg');
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('ooo');
+			navLeft[i].classList.add('fff');
+		}
+
+		logo.classList.remove('oooFill');
+		logo.classList.add('fffFill');	
+
+		hamburgerMenu.classList.remove('oooBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 });
 
@@ -95,47 +104,49 @@ window.addEventListener('scroll', ()=> {
 
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header div:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type').classList.remove('fffBg');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
+		itemcount.classList.remove('ooo');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.remove('fffBg');
+		itemcountBg.classList.add('oooBg');
 	}
 
 	//page is scrolled
 	else if (window.pageYOffset > 50) {
-		document.querySelector('header div:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type').classList.remove('fffBg');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
+		itemcount.classList.remove('ooo');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.remove('fffBg');
+		itemcountBg.classList.add('oooBg');
 	}
 
 	//screen has a max width of 1000px
 	else if (window.matchMedia('screen and (max-width: 1000px)').matches){
-		document.querySelector('header div:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:last-of-type').classList.remove('oooBg');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
+		itemcount.classList.remove('fff');
+		itemcount.classList.add('ooo');
+		itemcountBg.classList.remove('oooBg');
+		itemcountBg.classList.add('fffBg');
 	}
 
 	else {
-		document.querySelector('header div:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type').classList.remove('fffBg');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
+		itemcount.classList.remove('ooo');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.remove('fffBg');
+		itemcountBg.classList.add('oooBg');
 	}
 });
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// shoe product sliders (index.html --> 3rd section)
+/*****************************************************/
+/* shoe product sliders (index.html --> 3rd section) */
+/*****************************************************/
 
 
 //-(1st product)----------------------------------------------------------------------------------
-var slider1 = document.querySelector('main section:nth-child(3) div:first-of-type img');
-var sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
-var vooruitKnop1 = document.querySelector('main section:nth-child(3) div:first-of-type button:first-of-type');
-var terugKnop1 = document.querySelector('main section:nth-child(3) div:first-of-type button:last-of-type');
+const slider1 = document.querySelector('main section:nth-child(3) div:first-of-type img');
+const sliderFotos1 = ['shoe1slider1.png', 'shoe1slider2.png', 'shoe1slider3.png', 'shoe1slider4.png', 'shoe1slider5.png', 'shoe1slider6.png'];
+const vooruitKnop1 = document.querySelector('main section:nth-child(3) div:first-of-type button:first-of-type');
+const terugKnop1 = document.querySelector('main section:nth-child(3) div:first-of-type button:last-of-type');
 
-var onePaginaNr = 0;
+let onePaginaNr = 0;
 onelaatFotoZien();	
 
 function onelaatFotoZien() {
@@ -159,12 +170,12 @@ terugKnop1.addEventListener('click', ()=> {
 
 
 //-(2nd product)----------------------------------------------------------------------------------
-var slider2 = document.querySelector('main section:nth-child(3) div:nth-child(3) img');
-var sliderFotos2 = ['shoe2slider1.png', 'shoe2slider2.png', 'shoe2slider3.png', 'shoe2slider4.png', 'shoe2slider5.png'];
-var vooruitKnop2 = document.querySelector('main section:nth-child(3) div:nth-child(3) button:first-of-type');
-var terugKnop2 = document.querySelector('main section:nth-child(3) div:nth-child(3) button:last-of-type');
+const slider2 = document.querySelector('main section:nth-child(3) div:nth-child(3) img');
+const sliderFotos2 = ['shoe2slider1.png', 'shoe2slider2.png', 'shoe2slider3.png', 'shoe2slider4.png', 'shoe2slider5.png'];
+const vooruitKnop2 = document.querySelector('main section:nth-child(3) div:nth-child(3) button:first-of-type');
+const terugKnop2 = document.querySelector('main section:nth-child(3) div:nth-child(3) button:last-of-type');
 
-var twoPaginaNr = 0;
+let twoPaginaNr = 0;
 twolaatFotoZien();	
 
 function twolaatFotoZien() {
@@ -188,12 +199,12 @@ terugKnop2.addEventListener('click', ()=> {
 
 
 //-(3rd product)----------------------------------------------------------------------------------
-var slider3 = document.querySelector('main section:nth-child(3) div:last-of-type img');
-var sliderFotos3 = ['shoe3slider1.png', 'shoe3slider2.png', 'shoe3slider3.png', 'shoe3slider4.png', 'shoe3slider5.png', 'shoe3slider6.png'];
-var vooruitKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:first-of-type');
-var terugKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:last-of-type');
+const slider3 = document.querySelector('main section:nth-child(3) div:last-of-type img');
+const sliderFotos3 = ['shoe3slider1.png', 'shoe3slider2.png', 'shoe3slider3.png', 'shoe3slider4.png', 'shoe3slider5.png', 'shoe3slider6.png'];
+const vooruitKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:first-of-type');
+const terugKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:last-of-type');
 
-var threePaginaNr = 0
+let threePaginaNr = 0
 threelaatFotoZien();	
 
 function threelaatFotoZien() {

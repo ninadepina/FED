@@ -1,9 +1,11 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// mouse scroll animation
+/**************************/
+/* mouse scroll animation */
+/**************************/
 
 
-var h2 = document.querySelector('main section:first-of-type h2');
-var mouse = document.querySelector('main section:first-of-type div');
+const h2 = document.querySelector('main section:first-of-type h2');
+const mouse = document.querySelector('main section:first-of-type div');
 
 //automatically runs function, adds animation when in desktop
 (function () { 
@@ -24,7 +26,18 @@ var mouse = document.querySelector('main section:first-of-type div');
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// changing header on scroll
+/*****************************/
+/* changing header on scroll */
+/*****************************/
+
+//all items in header
+const header = document.querySelector('header');
+const logo = document.querySelector('header div:first-of-type svg');
+let navLeft = document.querySelectorAll('header nav ul:first-of-type a'), i;
+// let navRight = document.querySelectorAll('header nav ul:last-of-type a'), i;
+const itemcount = document.querySelector('header div:last-of-type a');
+const itemcountBg = document.querySelector('header div:last-of-type');
+const hamburgerMenu = document.querySelector('header details summary span');
 
 
 //automatically runs function, adds classes to the header
@@ -32,43 +45,50 @@ var mouse = document.querySelector('main section:first-of-type div');
 	
 	//page is scrolled and screen has a max width of 1000px
     if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
-        document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
+
+		for (i = 0; i < navLeft.length; ++i) { //loop to change all elements in 'navLeft'
+			navLeft[i].classList.add('fff');
+		}
+	
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
+
+		logo.classList.add('fffFill');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.add('fffBg');
+		hamburgerMenu.classList.add('fffBg');
     }
 	
 	//page has a max width of 1000px
 	else if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.add('fff');
+		}
+
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
+
+		logo.classList.add('fffFill');
+		itemcount.classList.add('ooo');
+		itemcountBg.classList.add('fffBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 
 	else {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.add('fff');
+		}
+
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
-		document.querySelector('header details summary span').classList.add('fffBg');
+
+		logo.classList.add('fffFill');
+		itemcount.classList.add('ooo');
+		itemcountBg.classList.add('fffBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 }());
 
@@ -88,42 +108,45 @@ window.addEventListener('scroll', ()=> {
 
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('ooo');
-		document.querySelector('header').classList.remove('transparent');
+		header.classList.remove('transparent');
+		header.classList.add('fffTransparent');
+
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('ooo');
+		}
+
 		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('fff');
 		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('fff');
 		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:first-of-type svg').classList.remove('fffFill');	
-		document.querySelector('header details summary span').classList.remove('fffBg');
-        
-		document.querySelector('header').classList.add('fffTransparent');
-		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
-		document.querySelector('header details summary span').classList.add('oooBg');
+
+		logo.classList.remove('fffFill');	
+		logo.classList.add('oooFill');
+
+		hamburgerMenu.classList.remove('fffBg');
+		hamburgerMenu.classList.add('oooBg');
 	}
 
 	//page is scrolled
 	else if (window.pageYOffset > 50) {
-		document.querySelector('header').classList.remove('transparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:first-of-type svg').classList.remove('fffFill');
-		document.querySelector('header details summary span').classList.remove('fffBg');
-		document.querySelector('header details summary span').classList.remove('oooBg');
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('fff');
+		header.classList.remove('transparent');
+		header.classList.add('fffTransparent');
+
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('fff');
+			navLeft[i].classList.add('ooo');
+		}
+
+		document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('fff');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.remove('fff');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.remove('fff');
-
-		document.querySelector('header').classList.add('fffTransparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:first-of-type svg').classList.add('oooFill');
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('ooo');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('ooo');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('ooo');
+
+		logo.classList.remove('fffFill');
+		logo.classList.add('oooFill');
+
+		hamburgerMenu.classList.remove('fffBg', 'oooBg');
 
 		//removes mouse animation and adds h2
 		h2.classList.remove('displayNone');
@@ -131,25 +154,26 @@ window.addEventListener('scroll', ()=> {
 	}
 
 	else {
-		document.querySelector('header').classList.remove('fffTransparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('ooo');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:first-of-type svg').classList.remove('oooFill');
-		document.querySelector('header details summary span').classList.remove('oooBg');
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('ooo');
+		header.classList.remove('fffTransparent');
+		header.classList.add('transparent');
+
+		for (i = 0; i < navLeft.length; ++i) { 
+			navLeft[i].classList.remove('ooo');
+			navLeft[i].classList.add('fff');
+		}
+
+		document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('ooo');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.remove('ooo');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.remove('ooo');
-
-		document.querySelector('header').classList.add('transparent');
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.add('fff');
-		document.querySelector('header div:first-of-type svg').classList.add('fffFill');	
-		document.querySelector('header details summary span').classList.add('fffBg');
         document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
 		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
+
+		logo.classList.remove('oooFill');
+		logo.classList.add('fffFill');	
+
+		hamburgerMenu.classList.remove('oooBg');
+		hamburgerMenu.classList.add('fffBg');
 	}
 });
 
@@ -158,34 +182,36 @@ window.addEventListener('scroll', ()=> {
 
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
-		document.querySelector('header div:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type').classList.remove('fffBg');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
+		itemcount.classList.remove('ooo');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.remove('fffBg');
+		itemcountBg.classList.add('oooBg');
 	}
 
 	//page is scrolled 
 	else if (window.pageYOffset > 50) {
-		document.querySelector('header div:last-of-type a').classList.remove('ooo');
-		document.querySelector('header div:last-of-type a').classList.add('fff');
-		document.querySelector('header div:last-of-type').classList.remove('fffBg');
-		document.querySelector('header div:last-of-type').classList.add('oooBg');
+		itemcount.classList.remove('ooo');
+		itemcount.classList.add('fff');
+		itemcountBg.classList.remove('fffBg');
+		itemcountBg.classList.add('oooBg');
 	}
 
 	else {
-		document.querySelector('header div:last-of-type a').classList.remove('fff');
-		document.querySelector('header div:last-of-type a').classList.add('ooo');
-		document.querySelector('header div:last-of-type').classList.remove('oooBg');
-		document.querySelector('header div:last-of-type').classList.add('fffBg');
+		itemcount.classList.remove('fff');
+		itemcount.classList.add('ooo');
+		itemcountBg.classList.remove('oooBg');
+		itemcountBg.classList.add('fffBg');
 	}
 });
 
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/**********************************************/
+/* toggle element in the bottom of the screen */
+/**********************************************/
 
-// toggle element in the bottom of the screen
-var toggle = document.querySelector('main section:last-of-type label');
+const toggle = document.querySelector('main section:last-of-type label');
 
 //adds classes after reload
 window.onload = ()=> { 
@@ -226,9 +252,9 @@ window.addEventListener('scroll', ()=> {
 
 
 
-var toggleElementRight = document.querySelector('main section:last-of-type label div div a:last-of-type');
-var toggleElementLeft = document.querySelector('main section:last-of-type label div div a:first-of-type');
-var toggleButton = document.querySelector('main section:last-of-type label div div:last-of-type');
+const toggleElementRight = document.querySelector('main section:last-of-type label div div a:last-of-type');
+const toggleElementLeft = document.querySelector('main section:last-of-type label div div a:first-of-type');
+const toggleButton = document.querySelector('main section:last-of-type label div div:last-of-type');
 
 toggleButton.classList.add('left');
 toggleElementLeft.classList.add('fff');

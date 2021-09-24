@@ -1,12 +1,20 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// changing header on scroll
+/*****************************/
+/* changing header on scroll */
+/*****************************/
+
+//all items in header
+const header = document.querySelector('header');
+const itemcount = document.querySelector('header div:last-of-type a');
+const itemcountBg = document.querySelector('header div:last-of-type');
+const hamburgerMenu = document.querySelector('header details summary span');
 
 
 //automatically runs function, adds classes to the header
 (function () { 
-	document.querySelector('header div:last-of-type').classList.add('oooBg');
-	document.querySelector('header div:last-of-type a').classList.add('fff');
-	document.querySelector('header details summary span').classList.add('oooBg');
+	itemcountBg.classList.add('oooBg');
+	itemcount.classList.add('fff');
+	hamburgerMenu.classList.add('oooBg');
 }());
 
 
@@ -15,28 +23,30 @@ window.addEventListener('scroll', ()=> {
 
 	//page is scrolled
 	if (window.pageYOffset > 50) {
-		document.querySelector('header').classList.remove('transparent');
-		document.querySelector('header').classList.add('fffTransparent');
+		header.classList.remove('transparent');
+		header.classList.add('fffTransparent');
 	}
 	else {
-		document.querySelector('header').classList.remove('fffTransparent');
-		document.querySelector('header').classList.add('transparent');
+		header.classList.remove('fffTransparent');
+		header.classList.add('transparent');
 	}
 });
 
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// shoe care product sliders (shoecare-grid.html --> 1st section)
+/******************************************************************/
+/* shoe care product sliders (shoecare-grid.html --> 1st section) */
+/******************************************************************/
 
 
 //-(cleaning kit)----------------------------------------------------------------------------------
-var slider1st = document.querySelector('main section:first-of-type article:first-of-type img');
-var sliderShoeKit = ['shoeKit.jpg', 'shoeKit2.jpg', 'shoeKit3.jpg'];
-var forward1 = document.querySelector('section:first-of-type article:first-of-type button:last-of-type');
-var back1 = document.querySelector('section:first-of-type article:first-of-type button:first-of-type');
+const slider1st = document.querySelector('main section:first-of-type article:first-of-type img');
+const sliderShoeKit = ['shoeKit.jpg', 'shoeKit2.jpg', 'shoeKit3.jpg'];
+const forward1 = document.querySelector('section:first-of-type article:first-of-type button:last-of-type');
+const back1 = document.querySelector('section:first-of-type article:first-of-type button:first-of-type');
 
-var pageNr1 = 0;
+let pageNr1 = 0;
 showImg();	
 
 function showImg() {
@@ -60,12 +70,12 @@ back1.addEventListener('click', ()=> {
 
 
 //-(sneaker wipes)----------------------------------------------------------------------------------
-var slider2nd = document.querySelector('main section:first-of-type article:nth-child(3) img');
-var sliderWipes = ['wipes.jpg', 'wipes2.jpg', 'wipes3.jpg'];
-var forward2 = document.querySelector('section:first-of-type article:nth-child(3) button:last-of-type');
-var back2 = document.querySelector('section:first-of-type article:nth-child(3) button:first-of-type');
+const slider2nd = document.querySelector('main section:first-of-type article:nth-child(3) img');
+const sliderWipes = ['wipes.jpg', 'wipes2.jpg', 'wipes3.jpg'];
+const forward2 = document.querySelector('section:first-of-type article:nth-child(3) button:last-of-type');
+const back2 = document.querySelector('section:first-of-type article:nth-child(3) button:first-of-type');
 
-var pageNr2 = 0;
+let pageNr2 = 0;
 showImg2();	
 
 function showImg2() {
@@ -89,12 +99,12 @@ back2.addEventListener('click', ()=> {
 
 
 //-(insoles)----------------------------------------------------------------------------------
-var slider3rd = document.querySelector('main section:first-of-type article:nth-child(4) img');
-var sliderInsoles = ['insoles.jpg', 'insoles2.png'];
-var forward3 = document.querySelector('section:first-of-type article:nth-child(4) button:last-of-type');
-var back3 = document.querySelector('section:first-of-type article:nth-child(4) button:first-of-type');
+const slider3rd = document.querySelector('main section:first-of-type article:nth-child(4) img');
+const sliderInsoles = ['insoles.jpg', 'insoles2.png'];
+const forward3 = document.querySelector('section:first-of-type article:nth-child(4) button:last-of-type');
+const back3 = document.querySelector('section:first-of-type article:nth-child(4) button:first-of-type');
 
-var pageNr3 = 0;
+let pageNr3 = 0;
 showImg3();	
 
 function showImg3() {
@@ -118,12 +128,12 @@ back3.addEventListener('click', ()=> {
 
 
 //-(arch support)----------------------------------------------------------------------------------
-var slider4th = document.querySelector('main section:first-of-type article:last-of-type img');
-var sliderArch = ['archSupport.png', 'archSupport2.jpg'];
-var forward4 = document.querySelector('section:first-of-type article:last-of-type button:last-of-type');
-var back4 = document.querySelector('section:first-of-type article:last-of-type button:first-of-type');
+const slider4th = document.querySelector('main section:first-of-type article:last-of-type img');
+const sliderArch = ['archSupport.png', 'archSupport2.jpg'];
+const forward4 = document.querySelector('section:first-of-type article:last-of-type button:last-of-type');
+const back4 = document.querySelector('section:first-of-type article:last-of-type button:first-of-type');
 
-var pageNr4 = 0;
+let pageNr4 = 0;
 showImg4();	
 
 function showImg4() {
@@ -148,9 +158,11 @@ back4.addEventListener('click', ()=> {
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+/******************************************/
+/* toggle element in bottom of the screen */
+/******************************************/
 
-// toggle element in bottom of the screen
-var toggle = document.querySelector('main section:last-of-type label');
+const toggle = document.querySelector('main section:last-of-type label');
 
 toggle.classList.remove('displayNone');
 
@@ -167,9 +179,9 @@ window.addEventListener('scroll', ()=> {
 	}
 });
 
-var toggleElementRight = document.querySelector('main section:last-of-type label div div a:last-of-type');
-var toggleElementLeft = document.querySelector('main section:last-of-type label div div a:first-of-type');
-var toggleButton = document.querySelector('main section:last-of-type label div div:last-of-type');
+const toggleElementRight = document.querySelector('main section:last-of-type label div div a:last-of-type');
+const toggleElementLeft = document.querySelector('main section:last-of-type label div div a:first-of-type');
+const toggleButton = document.querySelector('main section:last-of-type label div div:last-of-type');
 
 toggleButton.classList.add('right');
 toggleElementRight.classList.add('fff');
