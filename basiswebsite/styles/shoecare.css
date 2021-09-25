@@ -7,9 +7,14 @@
   background: #83dde077;
 }
   
-/* :root {
-
-} */
+:root {
+  --fontsize-xs: 0.6em;
+  --fontsize-s: 0.8em;
+  --fontsize-l: 1.6em;
+  --fontweight-thin: 300;
+  --fontweight-medium: 400;
+  --fontweight-thick: 600;
+}
   
 html, body {
   margin: 0;
@@ -21,37 +26,28 @@ h1 {
   left: -1000px; /* makes it not visible on the screen but still visible in html for screenreaders*/
 }
 h2 {
-  font-family: var(--main-font);
-  font-size: 1.6em;
-  font-weight: 400;
+  font-size: var(--fontsize-l);
+  font-weight: var(--fontweight-medium);
 }
 h3 {
-  font-family: var(--main-font);
-  font-size: 0.8em;
-  font-weight: 600;
+  font-size: var(--fontsize-s);
+  font-weight: var(--fontweight-thick);
 }
 p {
-  font-family: var(--main-font);
-  font-size: 1em;
-  font-weight: 300;
+  font-weight: var(--fontweight-thin);
 }
 li {
-  font-family: var(--main-font);
-  font-size: 0.6em;
+  font-size: var(--fontsize-xs);
+  font-weight: var(--fontweight-thin);
   list-style-type: none;
-  font-weight: 300;
 } 
 a {
-  font-family: var(--main-font);
-  font-size: 0.8em;
-  color: var(--font-color);
+  font-size: var(--fontsize-s);
   text-decoration: none;
 }
-
 button {
-  font-family: var(--main-font);
-  font-size: 0.8em;
-  font-weight: 600;
+  font-size: var(--fontsize-s);
+  font-weight: var(--fontweight-thick);
 }
   
 /* ------------------------------------------------------------------------------------------ */
@@ -69,7 +65,7 @@ button {
   bottom: -5px;
   width: 0;
   height: 2%;
-  background: var(--font-color);
+  background: black;
   transition-property: width;
   transition: 0.3s ease-out;
 }
@@ -939,7 +935,6 @@ footer div:last-of-type ul:hover svg {
     max-width: 100%;
     width: 94vw;
     padding: 20px 0;
-    font-family: var(--main-font);
     font-size: 0.8em;
     font-weight: 600;
     list-style-type: none;
