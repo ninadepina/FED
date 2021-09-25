@@ -34,7 +34,7 @@ const mouse = document.querySelector('main section:first-of-type div');
 const header = document.querySelector('header');
 const logo = document.querySelector('header div:first-of-type svg');
 let navLeft = document.querySelectorAll('header nav ul:first-of-type a'), i;
-// let navRight = document.querySelectorAll('header nav ul:last-of-type a'), i;
+let navRight = document.querySelectorAll('header nav ul:last-of-type a'), j;
 const itemcount = document.querySelector('header div:last-of-type a');
 const itemcountBg = document.querySelector('header div:last-of-type');
 const hamburgerMenu = document.querySelector('header details summary span');
@@ -50,9 +50,9 @@ const hamburgerMenu = document.querySelector('header details summary span');
 			navLeft[i].classList.add('fff');
 		}
 	
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
+		for (j = 0; j < navRight.length; ++j) { //loop to change all elements in 'navRight'
+			navRight[j].classList.add('fff');
+		}
 
 		logo.classList.add('fffFill');
 		itemcount.classList.add('fff');
@@ -65,11 +65,10 @@ const hamburgerMenu = document.querySelector('header details summary span');
 		for (i = 0; i < navLeft.length; ++i) { 
 			navLeft[i].classList.add('fff');
 		}
-
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-
+		for (j = 0; j < navRight.length; ++j) { 
+			navRight[j].classList.add('fff');
+		}
+ 
 		logo.classList.add('fffFill');
 		itemcount.classList.add('ooo');
 		itemcountBg.classList.add('fffBg');
@@ -80,10 +79,9 @@ const hamburgerMenu = document.querySelector('header details summary span');
 		for (i = 0; i < navLeft.length; ++i) { 
 			navLeft[i].classList.add('fff');
 		}
-
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
+		for (j = 0; j < navRight.length; ++j) { 
+			navRight[j].classList.add('fff');
+		}
 
 		logo.classList.add('fffFill');
 		itemcount.classList.add('ooo');
@@ -114,10 +112,9 @@ window.addEventListener('scroll', ()=> {
 		for (i = 0; i < navLeft.length; ++i) { 
 			navLeft[i].classList.remove('ooo');
 		}
-
-		document.querySelector('header nav ul:first-of-type li:first-of-type a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:nth-child(2) a').classList.remove('fff');
-		document.querySelector('header nav ul:first-of-type li:last-of-type a').classList.remove('fff');
+		for (j = 0; j < navRight.length; ++j) { 
+			navRight[j].classList.remove('fff');
+		}
 
 		logo.classList.remove('fffFill');	
 		logo.classList.add('oooFill');
@@ -135,13 +132,10 @@ window.addEventListener('scroll', ()=> {
 			navLeft[i].classList.remove('fff');
 			navLeft[i].classList.add('ooo');
 		}
-
-		document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.remove('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.remove('fff');
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('ooo');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('ooo');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('ooo');
+		for (j = 0; j < navRight.length; ++j) { 
+			navRight[j].classList.remove('fff');
+			navRight[j].classList.add('ooo');
+		}
 
 		logo.classList.remove('fffFill');
 		logo.classList.add('oooFill');
@@ -161,14 +155,11 @@ window.addEventListener('scroll', ()=> {
 			navLeft[i].classList.remove('ooo');
 			navLeft[i].classList.add('fff');
 		}
-
-		document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.remove('ooo');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.remove('ooo');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.remove('ooo');
-        document.querySelector('header nav ul:last-of-type li:first-of-type a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:nth-child(2) a').classList.add('fff');
-		document.querySelector('header nav ul:last-of-type li:last-of-type a').classList.add('fff');
-
+		for (j = 0; j < navRight.length; ++j) { 
+			navRight[j].classList.remove('ooo');
+			navRight[j].classList.add('fff');
+		}
+	
 		logo.classList.remove('oooFill');
 		logo.classList.add('fffFill');	
 
