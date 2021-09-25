@@ -4,7 +4,7 @@
   font-family: 'Urbanist', sans-serif;
 }
 *::selection {
-  background: #83dde077;
+  background: #00BCD4;
 }
   
 :root {
@@ -155,6 +155,12 @@ header svg path:nth-of-type(4) {
 	20% { transform: scale(0.9, 1.1); }
 }
 
+header div:first-of-type a:focus svg {
+  transform: scale(-1, -1);
+}
+
+
+
 header a {
   font-size: 0.8em;
 }
@@ -190,6 +196,9 @@ header div:last-of-type {
   height: 25px;
   border-radius: 50%;
   text-align: center;
+}
+header div:last-of-type:focus-within {
+  background: #00BCD4;
 }
 header div:last-of-type a {
   align-items: center;
@@ -460,7 +469,9 @@ section:last-of-type div div:first-of-type p:last-of-type {
   right: 2.9em;
 }
 
-
+section:last-of-type div div:focus-within {
+  background: #00BCD4;
+}
 
 
 
@@ -503,6 +514,16 @@ footer div:first-of-type {
 
 footer details {
   display: none;
+}
+
+footer div:nth-of-type(2) ul li:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z'/%3E%3C/svg%3E") 25 15, pointer;
+}
+footer div:nth-of-type(3) ul li:first-of-type:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z'/%3E%3C/svg%3E") 25 15, pointer;
+}
+footer div:nth-of-type(3) ul li:last-of-type:hover {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M18.48 22.926l-1.193.658c-6.979 3.621-19.082-17.494-12.279-21.484l1.145-.637 3.714 6.467-1.139.632c-2.067 1.245 2.76 9.707 4.879 8.545l1.162-.642 3.711 6.461zm-9.808-22.926l-1.68.975 3.714 6.466 1.681-.975-3.715-6.466zm8.613 14.997l-1.68.975 3.714 6.467 1.681-.975-3.715-6.467z'/%3E%3C/svg%3E") 25 15, pointer;
 }
 
 
