@@ -62,6 +62,7 @@ input[type=submit] {
 
 /* ------------------------------------------------------------------------------------------ */
 
+/* link underline animation */
 .animateLink {
   display: inline;
   position: relative;
@@ -87,6 +88,8 @@ input[type=submit] {
   width: 100%;
 }
 
+/* prefers-reduced-motion */
+/* SEE BOTTOM OF CSS FILE */
 
 
 
@@ -193,11 +196,6 @@ header nav {
   width: 86vw;
   padding: 0 2em;
   justify-content: space-between;
-}
-@media only screen and (min-width: 1450px) {
-  header nav {
-    width: 80vw;
-  }
 }
 
 header nav ul {
@@ -316,7 +314,7 @@ header details {
 
 
 
-/* ------------------------------------------------------------------------------------------ */
+/*---------------------------------------------------------------------*/
 /* ---------------------- */
 
 section {
@@ -760,5 +758,29 @@ footer div:last-of-type ul:hover svg {
 @media only screen and (max-width: 745px) {
   footer {
     max-width: 94%;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* prefers-reduced-motion */
+
+@media (prefers-reduced-motion: reduce) {
+  header svg path { /* removes etg. logo animation */
+    animation: none;
+  }
+  footer svg path:nth-child(2), /* removes twitter animation */
+  footer svg path:last-of-type,
+  footer div:last-of-type ul:hover svg { 
+    animation: none;
+  }
+  .fade-in { /* NO animation with intersectionObserver*/
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
   }
 }

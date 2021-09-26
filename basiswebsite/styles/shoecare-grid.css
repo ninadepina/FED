@@ -178,11 +178,6 @@ header nav {
   padding: 0 2em;
   justify-content: space-between;
 }
-@media only screen and (min-width: 1450px) {
-  header nav {
-    width: 80vw;
-  }
-}
   
 header nav ul {
   display: flex;
@@ -639,5 +634,24 @@ footer div:last-of-type ul:hover svg {
 @media only screen and (max-width: 745px) {
   footer {
     max-width: 94%;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------ */
+/* prefers-reduced-motion */
+
+@media (prefers-reduced-motion: reduce) {
+  header svg path { /* removes etg. logo animation */
+    animation: none;
+  }
+  footer svg path:nth-child(2), /* removes twitter animation */
+  footer svg path:last-of-type,
+  footer div:last-of-type ul:hover svg { 
+    animation: none;
   }
 }

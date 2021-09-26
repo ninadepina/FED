@@ -190,11 +190,6 @@ header nav {
   padding: 0 2em;
   justify-content: space-between;
 }
-@media only screen and (min-width: 1450px) {
-  header nav {
-    width: 80vw;
-  }
-}
   
 header nav ul {
   display: flex;
@@ -309,7 +304,7 @@ header details {
 }
 
 
-/* ------------------------------------------------------------------------------------------ */
+/*--------------------------------------------------------------------*/
 /* ---------------------- */
 
 section {
@@ -320,7 +315,7 @@ section {
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */
-/* img banner with animation */
+/*   img banner with titel   */
 
 section:first-of-type {
   position: relative;
@@ -334,7 +329,7 @@ section:first-of-type h2 {
   position: absolute;
   bottom: 10%;
   left: 50%;
-  transform:translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 @media only screen and (max-width: 1000px) {
   section:first-of-type img {
@@ -360,31 +355,7 @@ section:first-of-type h2 {
   }
 }
 
-@keyframes scrollDown {
-	0%, 20% { transform: translate3d(0, 0, 0); }
-	25% { opacity: 1; }
-	100% { transform: translate3d(0, 25px, 0); opacity: 0; }
-}
 
-section:first-of-type div svg g g ellipse {
-	animation: scrollDown 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
-}
-
-section:first-of-type div svg {
-  width: 2em;
-  height: 2em;
-}
-
-section:first-of-type svg g {
-  fill: rgba(0, 0, 0, 0.603);
-}
-
-section:first-of-type div {
-  position: absolute;
-  bottom: 16%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 
 
@@ -574,7 +545,7 @@ section:nth-child(5) {
   margin-top: 4em;
   padding: 0 2em;
 }
-section:nth-child(5) video{
+section:nth-child(5) video {
   width: 100%;
 }
 
@@ -1015,5 +986,31 @@ footer div:last-of-type ul:hover svg {
 @media only screen and (max-width: 745px) {
   footer {
     max-width: 94%;
+  }
+}
+
+
+
+
+/*----------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+/* prefers-reduced-motion */
+
+@media (prefers-reduced-motion: reduce) {
+  header svg path { /* removes etg. logo animation */
+    animation: none;
+  }
+  footer svg path:nth-child(2), /* removes twitter animation */
+  footer svg path:last-of-type,
+  footer div:last-of-type ul:hover svg { 
+    animation: none;
+  }
+  .fade-in { /* NO animation with intersectionObserver*/
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+  section:first-of-type div svg g g ellipse { /* removes mouse scroll down animation */
+    animation: none;
   }
 }

@@ -1,31 +1,4 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-/**************************/
-/* mouse scroll animation */
-/**************************/
-
-
-const h2 = document.querySelector('main section:first-of-type h2');
-const mouse = document.querySelector('main section:first-of-type div');
-
-//automatically runs function, adds animation when in desktop
-(function () { 
-
-	//screen has a min width of 1425px (desktop)
-	if (window.matchMedia('screen and (min-width: 1425px)').matches) {
-		mouse.classList.remove('displayNone');
-		h2.classList.add('displayNone');
-	}
-	else {
-		h2.classList.remove('displayNone');
-		mouse.classList.add('displayNone');
-	}
-}());
-
-
-
-
-
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*****************************/
 /* changing header on scroll */
 /*****************************/
