@@ -305,6 +305,7 @@ section {
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */
+/*    4 product carousels    */
 
 section:first-of-type {
   display: flex;
@@ -388,6 +389,7 @@ section:first-of-type article button:focus {
 /* ------ ------------ ------ */
 /* ------ LAST SECTION ------ */
 /* ------ ------------ ------ */
+/*       toggle button        */
 
 section:last-of-type {
   position: fixed;

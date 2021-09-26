@@ -317,6 +317,7 @@ section {
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */
+/* img banner with animation */
 
 section:first-of-type {
   position: relative;
@@ -387,6 +388,7 @@ section:first-of-type div {
 /* ----- -------------- ----- */
 /* ----- SECOND SECTION ----- */
 /* ----- -------------- ----- */
+/*            text            */
 
 section:nth-child(2) {
   display: flex;
@@ -419,6 +421,7 @@ section:nth-child(2) p {
 /* ----- ------------- ----- */
 /* ----- THIRD SECTION ----- */
 /* ----- ------------- ----- */
+/*   grid with img and text  */
 
 section:nth-child(3) {
   max-width: 100vw;
@@ -498,6 +501,7 @@ section:nth-child(3) h3 {
 /* ----- -------------- ----- */
 /* ----- FOURTH SECTION ----- */
 /* ----- -------------- ----- */
+/*      text and button       */
 
 section:nth-child(4) {
   margin-top: 4em;
@@ -561,6 +565,7 @@ section:nth-child(4) div a:hover, section:nth-child(4) div a:focus {
 /* ----- ------------- ----- */
 /* ----- FIFTH SECTION ----- */
 /* ----- ------------- ----- */
+/*           video           */
 
 section:nth-child(5) {
   margin-top: 4em;
@@ -577,10 +582,11 @@ section:nth-child(5) video{
 /* ----- ------------- ----- */
 /* ----- SIXTH SECTION ----- */
 /* ----- ------------- ----- */
+/*       img and text        */
 
 section:nth-child(6) {
-  margin: 8em 0 0 2em;
-  padding-right: 2em;
+  margin: 2em 0 0 2em;
+  padding: 6em 2em 0 0;
   display: grid; 
   align-items: center;
   grid-template-columns: repeat(2, 1fr); 
@@ -621,10 +627,11 @@ section:nth-child(6) img {
 /* ----- --------------- ----- */
 /* ----- SEVENTH SECTION ----- */
 /* ----- --------------- ----- */
+/*    grid with img and text   */
 
 section:nth-child(7) {
-  margin: 8em 0 0 2em;
-  padding-right: 2em;
+  margin: 2em 0 0 2em;
+  padding: 6em 2em 0 0;
   display: grid; 
   align-items: center;
   grid-template-columns: repeat(2, 1fr); 
@@ -681,6 +688,7 @@ section:nth-child(7) div {
 /* ----- -------------- ----- */
 /* ----- EIGHTH SECTION ----- */
 /* ----- -------------- ----- */
+/*            text            */
 
 section:nth-child(8) {
   margin-top: 4em;
@@ -716,10 +724,11 @@ section:nth-child(8) div {
 /* ----- ------------- ----- */
 /* ----- NINTH SECTION ----- */
 /* ----- ------------- ----- */
+/*         img grid          */
 
 section:nth-child(9) {
-  margin: 4em 0 0 2em;
-  padding-right: 2em;
+  margin: 0.4em 0 0 2em;
+  padding: 3.6em 2em 0 0;
   display: grid; 
   align-items: center;
   grid-template-columns: 0.4fr 1fr; 
@@ -756,6 +765,7 @@ section:nth-child(9) img:last-of-type {
 /* ------ ------------ ------ */
 /* ------ LAST SECTION ------ */
 /* ------ ------------ ------ */
+/*       toggle button        */
 
 section:last-of-type {
   position: fixed;

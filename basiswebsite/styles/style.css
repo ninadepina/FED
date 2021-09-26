@@ -329,6 +329,7 @@ section {
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */
+/*  banner with img and text */
 
 section:first-of-type {
   position: relative;
@@ -396,11 +397,11 @@ section:first-of-type p {
 /* ----- -------------- ----- */
 /* ----- SECOND SECTION ----- */
 /* ----- -------------- ----- */
+/*         3 articles         */
 
 section:nth-child(2) {
   display: flex;
-  margin: 6em 0 0 0;
-  padding-left: 2em;
+  padding: 4em 0 0 2em;
   gap: 2em;
 }
 section:nth-child(2) article {
@@ -455,11 +456,13 @@ section:nth-child(2) a {
 /* ----- ------------- ----- */
 /* ----- THIRD SECTION ----- */
 /* ----- ------------- ----- */
+/*    3 product carousels    */
 
 section:nth-child(3) {
   display: flex;
   flex-wrap: wrap;
-  margin: 2em 2em 4em 2em;
+  margin: 1em 2em;
+  padding-top: 1em;
   gap: 2em;
 }
 section:nth-child(3) div {
@@ -532,21 +535,22 @@ section:nth-child(3) div button:last-of-type {
 /* ----- -------------- ----- */
 /* ----- FOURTH SECTION ----- */
 /* ----- -------------- ----- */
+/*         2 articles         */
 
 section:nth-child(4) {
   display: flex;
+  padding-top: 3em;
   gap: 2em;
+}
+section:nth-child(4) article img {
+  width: 100%;
 }
 section:nth-child(4) article:first-of-type {
   margin-left: 2em;
 }
 section:nth-child(4) article:last-of-type {
   margin-right: 2em;
-}
-section:nth-child(4) article:first-of-type img, 
-section:nth-child(4) article:last-of-type img {
-  width: 100%;
-}
+} 
 section:nth-child(4) h3 {
   cursor: pointer;
 }
@@ -558,8 +562,7 @@ section:nth-child(4) h3 {
     margin-top: 2em;
     gap: 2em;
   }
-  section:nth-child(4) article:first-of-type, 
-  section:nth-child(4) article:last-of-type {
+  section:nth-child(4) article {
     margin: 0 2em;
   }
 }
