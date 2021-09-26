@@ -79,7 +79,18 @@ button {
 }
   
   
-  
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 150ms ease-in, transform 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
   
   
 /* ----- ---------------------- ----- */
@@ -823,7 +834,7 @@ section:last-of-type div div:first-of-type p:last-of-type {
 }
 
 section:last-of-type div div:focus-within {
-  background: #00BCD4;
+  border: 1px dashed;
 }
 
 

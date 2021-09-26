@@ -347,27 +347,23 @@ section:first-of-type button {
   font-weight: bold;
   font-size: 1em;
 }
-section:first-of-type article:first-of-type:hover button, 
-section:first-of-type article:nth-child(3):hover button, 
-section:first-of-type article:nth-child(4):hover button, 
-section:first-of-type article:last-of-type:hover button {
+
+section:first-of-type article:hover button {
   opacity: 1;
   transition: 0.5s;
 }
-
-section:first-of-type article:first-of-type button:first-of-type, 
-section:first-of-type article:nth-child(3) button:first-of-type, 
-section:first-of-type article:nth-child(4) button:first-of-type, 
-section:first-of-type article:last-of-type button:first-of-type {
+section:first-of-type article button:first-of-type {
   left: 4%;
   top: 43%;
 }
-section:first-of-type article:first-of-type button:last-of-type, 
-section:first-of-type article:nth-child(3) button:last-of-type, 
-section:first-of-type article:nth-child(4) button:last-of-type,
-section:first-of-type article:last-of-type button:last-of-type {
+section:first-of-type article button:last-of-type {
   right: 4%;
   top: 43%;
+}
+section:first-of-type article button:focus {
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px dashed;
 }
 
 @media only screen and (max-width: 635px) {
@@ -470,7 +466,7 @@ section:last-of-type div div:first-of-type p:last-of-type {
 }
 
 section:last-of-type div div:focus-within {
-  background: #00BCD4;
+  border: 1px dashed;
 }
 
 

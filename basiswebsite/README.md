@@ -224,9 +224,9 @@ hier screenshot(s) van je eindresultaat
 <details>
 <summary></summary>
 
-### Html
+### HTML
 1. svg tag: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
-2. ...
+2. HTML character codes: https://www.rapidtables.com/web/html/html-codes.html
 3. ...
 
 ### CSS
@@ -239,5 +239,6 @@ hier screenshot(s) van je eindresultaat
 2. detect screen width: https://stackoverflow.com/questions/31162606/how-to-detect-screen-size-for-responsive-web-design
 3. reload after resize: https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
 4. addEventListener 'mouseout': https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event
+5. intersectionObserver: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
 
 </details>
