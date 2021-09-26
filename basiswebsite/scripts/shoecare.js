@@ -208,26 +208,26 @@ const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
 	threshold: 0,
-	rootMargin: "0px 0px -75px 0px"
+	rootMargin: "0px 0px -75px 0px" //element needs to be 75px from the bottom
 }
 
-const appearOnScroll = new IntersectionObserver
-(function(
-	entries,
-	appearOnScroll
-) {
+const appearOnScroll = new IntersectionObserver(
+	(entries, appearOnScroll) => {
 	entries.forEach(entry => {
+		//NO intersection
 		if (!entry.isIntersecting) {
 			return;
 		}
+		//YES intersection
 		else {
 			entry.target.classList.add("appear");
-			appearOnScroll.unobserve(entry.target);
+			appearOnScroll.unobserve(entry.target); //only observes once
 		}
 	});
 },
 appearOptions);
 
+//when using a intersectionObserver on multiple elements, this forEach loop is needed
 faders.forEach(fader => {
 	appearOnScroll.observe(fader);
 });

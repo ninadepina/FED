@@ -90,21 +90,11 @@ input[type=submit] {
 
 
 
-.fade-in {
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 150ms ease-in, transform 250ms ease-in;
-}
-
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
 /* ----- ---------------------- ----- */
 /* ----- CLASSES FOR JAVASCRIPT ----- */
 /* ----- ---------------------- ----- */
+
+/* changing header on scroll */
 .fff {
   color: white;
 }
@@ -133,6 +123,17 @@ input[type=submit] {
 }
 
 
+/* intersection observer */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 150ms ease-in, transform 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
@@ -323,9 +324,6 @@ section {
 }
 
 
-
-
-
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */
@@ -334,6 +332,7 @@ section {
 section:first-of-type {
   position: relative;
 }
+
 section:first-of-type img {
   left:0;
   top: 0;
@@ -341,7 +340,6 @@ section:first-of-type img {
   height: 100vh;
   object-fit: cover;
 }
-
 section:first-of-type div {
   position: absolute;
   left: 70%;

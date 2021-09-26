@@ -79,23 +79,13 @@ button {
 }
   
   
-
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 150ms ease-in, transform 250ms ease-in;
-}
-
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
   
   
 /* ----- ---------------------- ----- */
 /* ----- CLASSES FOR JAVASCRIPT ----- */
 /* ----- ---------------------- ----- */
+
+/* changing header on scroll */
 .fff {
   color: white;
 }
@@ -128,10 +118,26 @@ button {
 .displayNone {
   display: none;
 }
-  
-  
-  
-  
+
+
+/* intersection observer */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 150ms ease-in, transform 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* ------------ ----- */
+/* ----- HEADER ----- */
+/* ----- ------ ----- */
+
 header {
   display: flex;
   align-items: center;
@@ -309,11 +315,8 @@ header details {
 section {
   letter-spacing: 2px;
 }
-  
-  
-  
-  
-  
+
+
 /* ----- ------------- ----- */
 /* ----- FIRST SECTION ----- */
 /* ----- ------------- ----- */

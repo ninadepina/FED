@@ -82,6 +82,8 @@ a {
 /* ----- ---------------------- ----- */
 /* ----- CLASSES FOR JAVASCRIPT ----- */
 /* ----- ---------------------- ----- */
+
+/* changing header on scroll */
 .fff {
   color: white;
 }
@@ -114,9 +116,13 @@ a {
 .displayNone {
   display: none;
 } 
-  
-  
-  
+
+
+
+/* ------------ ----- */
+/* ----- HEADER ----- */
+/* ----- ------ ----- */
+
 header {
   display: flex;
   align-items: center;
@@ -298,8 +304,6 @@ header details {
 section {
   letter-spacing: 2px;
 }
-
-
 
 
 /* ----- ------------- ----- */
