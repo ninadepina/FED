@@ -1073,4 +1073,8 @@ footer div:last-of-type ul:hover svg {
   section:first-of-type div ul { /* removes titel roulette animation */
     animation: none;
   }
+  section:nth-child(4) div a:hover, section:nth-child(4) div a:focus { /* removes button gradient animation */
+    animation: none;
+    -webkit-animation: none;
+  }
 }
