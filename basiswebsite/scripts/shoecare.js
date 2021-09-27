@@ -25,7 +25,7 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	
 		for (j = 0; j < navRight.length; ++j) { //loop to change all elements in 'navRight'
 			navRight[j].classList.add('fff');
-		}~
+		}
 
 		logo.classList.add('fffFill');
 		itemcount.classList.add('fff');
