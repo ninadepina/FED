@@ -521,7 +521,7 @@ footer div:first-of-type {
   max-width: 33%;
 }
 
-footer details {
+footer details, footer form {
   display: none;
 }
 

@@ -889,7 +889,7 @@ footer div:first-of-type {
   max-width: 33%;
 }
 
-footer details {
+footer details, footer form {
   display: none;
 }
 
@@ -1070,7 +1070,7 @@ footer div:last-of-type ul:hover svg {
     transform: translateY(0);
     transition: none;
   }
-  section:first-of-type div svg g g ellipse { /* removes mouse scroll down animation */
+  section:first-of-type div ul { /* removes titel roulette animation */
     animation: none;
   }
 }
