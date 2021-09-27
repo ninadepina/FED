@@ -383,7 +383,7 @@ section:first-of-type div div {
 
 @keyframes roulette {
   from { transform: translateY(0); }
-  to { transform: translateY(-9.6em); }
+  to { transform: translateY(-9.4em); }
 }
 
 
