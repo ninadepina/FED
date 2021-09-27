@@ -46,6 +46,18 @@ a {
   color: black;
   text-decoration: none;
 }
+footer label {
+  font-size: var(--fontsize-s);
+  font-weight: var(--fontweight-thin);
+} 
+input[type=email] {
+  font-size: var(--fontsize-s);
+  font-weight: var(--fontweight-thin);
+} 
+input[type=submit] {
+  font-size: var(--fontsize-s);
+  font-weight: var(--fontweight-thick);
+} 
   
   
 /* ----------------------------------------------------------------------------------------- */
@@ -618,6 +630,36 @@ footer div:last-of-type ul:hover svg {
   }
   footer details[open] summary::after {
     content: " \002D"; /* minus sign */
+  }
+
+  footer form {
+    display: block;
+    margin-left: 2em;
+    max-width: 100%;
+  }
+  footer form label[for=email] {
+    line-height: 1.3em;
+    margin-right: 1em;
+  }
+
+  footer form input[type=email] {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    line-height: 1.3em;
+    margin-right: 1em;
+  }
+  footer form input[type=email]:focus {
+    border-bottom: 1px solid black;
+  }
+  footer form input[type=submit] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid black;
+    line-height: 1.3em;
+    color: black;
+    font-size: var(--fontsize-s);
+    font-weight: var(--fontweight-thin);
+    margin: 0;
   }
 }
 

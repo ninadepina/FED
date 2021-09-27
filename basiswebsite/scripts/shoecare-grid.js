@@ -1,4 +1,4 @@
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*****************************/
 /* changing header on scroll */
 /*****************************/
@@ -34,13 +34,13 @@ window.addEventListener('scroll', ()=> {
 
 
 
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /******************************************************************/
 /* shoe care product sliders (shoecare-grid.html --> 1st section) */
 /******************************************************************/
 
 
-//-(cleaning kit)----------------------------------------------------------------------------------
+//-(cleaning kit)-------------------------------------------------------------------------
 const slider1st = document.querySelector('main section:first-of-type article:first-of-type img');
 const sliderShoeKit = ['shoeKit.jpg', 'shoeKit2.jpg', 'shoeKit3.jpg'];
 const forward1 = document.querySelector('section:first-of-type article:first-of-type button:last-of-type');
@@ -50,11 +50,11 @@ let pageNr1 = 0;
 showImg();	
 
 function showImg() {
-	if (pageNr1 > sliderShoeKit.length -1) { //paginaNr > laatste foto? 
-		pageNr1 = 0; //dan terug naar begin
+	if (pageNr1 > sliderShoeKit.length -1) { //paginaNr > last picture? 
+		pageNr1 = 0; //back to beginning
 	}
-	if (pageNr1 < 0) { //paginaNr < eerste foto?
-		pageNr1 = sliderShoeKit.length -1; //dan terug naar einde
+	if (pageNr1 < 0) { //paginaNr < first picture?
+		pageNr1 = sliderShoeKit.length -1; //back to end
 	}
 	slider1st.src = 'images/' + sliderShoeKit[pageNr1];
 }
@@ -69,7 +69,7 @@ back1.addEventListener('click', ()=> {
 } );
 
 
-//-(sneaker wipes)----------------------------------------------------------------------------------
+//-(sneaker wipes)-------------------------------------------------------------------------
 const slider2nd = document.querySelector('main section:first-of-type article:nth-child(3) img');
 const sliderWipes = ['wipes.jpg', 'wipes2.jpg', 'wipes3.jpg'];
 const forward2 = document.querySelector('section:first-of-type article:nth-child(3) button:last-of-type');
@@ -98,7 +98,7 @@ back2.addEventListener('click', ()=> {
 } );
 
 
-//-(insoles)----------------------------------------------------------------------------------
+//-(insoles)-------------------------------------------------------------------------
 const slider3rd = document.querySelector('main section:first-of-type article:nth-child(4) img');
 const sliderInsoles = ['insoles.jpg', 'insoles2.png'];
 const forward3 = document.querySelector('section:first-of-type article:nth-child(4) button:last-of-type');
@@ -127,7 +127,7 @@ back3.addEventListener('click', ()=> {
 } );
 
 
-//-(arch support)----------------------------------------------------------------------------------
+//-(arch support)-------------------------------------------------------------------------
 const slider4th = document.querySelector('main section:first-of-type article:last-of-type img');
 const sliderArch = ['archSupport.png', 'archSupport2.jpg'];
 const forward4 = document.querySelector('section:first-of-type article:last-of-type button:last-of-type');
@@ -157,7 +157,7 @@ back4.addEventListener('click', ()=> {
 
 
 
-//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /******************************************/
 /* toggle element in bottom of the screen */
 /******************************************/

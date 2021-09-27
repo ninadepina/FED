@@ -666,6 +666,7 @@ footer div:last-of-type ul:hover svg {
   footer {
     display: block;
     margin: 4em 0 2em 0;
+    max-width: 100vw;
   }
   footer div:first-of-type,
   footer div:nth-child(6), 
@@ -722,12 +723,13 @@ footer div:last-of-type ul:hover svg {
   footer form {
     display: block;
     margin-left: 2em;
+    max-width: 100%;
   }
   footer form label[for=email] {
     line-height: 1.3em;
     margin-right: 1em;
   }
-  
+
   footer form input[type=email] {
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.205);
@@ -742,6 +744,10 @@ footer div:last-of-type ul:hover svg {
     border: none;
     border-bottom: 1px solid black;
     line-height: 1.3em;
+    color: black;
+    font-size: var(--fontsize-s);
+    font-weight: var(--fontweight-thin);
+    margin: 0;
   }
 }
 
