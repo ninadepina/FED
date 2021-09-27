@@ -83,11 +83,11 @@ Stand van zaken:
 - nu verder met de tweede pagina
 
 ### Agenda voor meeting
-| Nina (ik)      | Student 2          | Student 3        | 
-| ---            | ---                | ---              | 
-| x              | Uitlijnen tekst in | x                | 
-|                | de hoogte          |                  | 
-|                |                    |                  | 
+| Nina (ik)      | Student 2                    | Student 3        | 
+| ---            | ---                          | ---              | 
+| x              | Uitlijnen tekst in de hoogte | x                | 
+|                |                              |                  | 
+|                |                              |                  | 
 
 
 ### Verslag van meeting
@@ -113,12 +113,11 @@ Stand van zaken:
 
 
 ### Agenda voor meeting
-| Nina (ik)      | Student 2          | Student 3        | 
-| ---            | ---                | ---              | 
-| Intersection   | Semantische code   | (ziek)           | 
-| observer       | schrijven          |                  | 
-|                |                    |                  | 
-
+| Nina (ik)             | Student 2                  | Student 3        | 
+| ---                   | ---                        | ---              | 
+| Intersection observer | Semantische code schrijven | (ziek)           | 
+|                       |                            |                  | 
+|                       |                            |                  | 
 
 ### Verslag van meeting
 - het gaat goed
