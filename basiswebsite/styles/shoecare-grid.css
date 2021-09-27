@@ -178,7 +178,6 @@ header div:first-of-type a:focus svg {
 }
 
 
-
 header a {
   font-size: 0.8em;
 }
@@ -360,9 +359,16 @@ section:first-of-type button {
   font-size: 1em;
 }
 
-section:first-of-type article:hover button {
+section:first-of-type article button:focus {
   opacity: 1;
   transition: 0.5s;
+  border: 1px dashed;
+}
+section:first-of-type article:hover button,
+section:first-of-type article button:active {
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px solid white;
 }
 section:first-of-type article button:first-of-type {
   left: 4%;
@@ -371,11 +377,6 @@ section:first-of-type article button:first-of-type {
 section:first-of-type article button:last-of-type {
   right: 4%;
   top: 43%;
-}
-section:first-of-type article button:focus {
-  opacity: 1;
-  transition: 0.5s;
-  border: 1px dashed;
 }
 
 @media only screen and (max-width: 635px) {

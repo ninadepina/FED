@@ -491,14 +491,16 @@ section:nth-child(3) button {
   font-size: 1em;
 }
 
-section:nth-child(3) div:hover button {
-  opacity: 1;
-  transition: 0.5s;
-}
 section:nth-child(3) div button:focus  {
   opacity: 1;
   transition: 0.5s;
   border: 1px dashed;
+}
+section:nth-child(3) div:hover button,
+section:nth-child(3) div button:active {
+  opacity: 1;
+  transition: 0.5s;
+  border: 1px solid white;
 }
 
 section:nth-child(3) div button:first-of-type {
