@@ -338,21 +338,10 @@ section:first-of-type img {
   width: 100vw;
   object-fit: cover;
 }
-section:first-of-type h2 {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 @media only screen and (max-width: 1000px) {
   section:first-of-type img {
     height: 80vw;
-  }
-}
-@media only screen and (max-width: 515px) {
-  section:first-of-type h2 {
-    left: 24%;
-    transform: none;
   }
 }
 @media only screen and (max-width: 376px) {
@@ -362,12 +351,40 @@ section:first-of-type h2 {
   section:first-of-type img {
     height: 65vh;
   }
-  section:first-of-type h2 {
-    left: 18%;
-    transform: none;
-  }
 }
 
+#roulette {
+  position: absolute;
+  bottom: 14%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+section:first-of-type div ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: all 1s;
+  animation: 2s linear 0s infinite roulette;
+}
+section:first-of-type div li {
+  font-size: var(--fontsize-l);
+  font-weight: var(--fontweight-medium);
+}
+
+section:first-of-type div h2{
+  margin: 0 0.3em 0 0;
+}
+
+section:first-of-type div div {
+  height: 1.6em;
+  overflow: hidden;
+}
+
+@keyframes roulette {
+  from { transform: translateY(0); }
+  to { transform: translateY(-9.6em); }
+}
 
 
 
