@@ -69,7 +69,7 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	
 	//screen has min-width of 376px
 	if (window.matchMedia('screen and (min-width: 376px)').matches) {
-		window.onresize = function() {location.reload();} 
+		window.onresize = function() {location.reload();};
 	}
 }());
 
@@ -178,7 +178,7 @@ const faders = document.querySelectorAll('.fade-in');
 const appearOptions = {
 	threshold: 0,
 	rootMargin: "0px 0px -75px 0px" //element needs to be 75px from the bottom
-}
+};
 
 const appearOnScroll = new IntersectionObserver(
 	(entries, appearOnScroll) => {
@@ -222,7 +222,7 @@ window.onload = ()=> {
 	else {
 		toggle.classList.add('displayNone');
 	}
-}
+};
 
 
 
@@ -283,7 +283,7 @@ toggleElementLeft.addEventListener('mouseover', ()=> {
 //moves toggle element back to orignal position when cursor leaves
 toggleElementRight.addEventListener('mouseout', ()=> {
 	toggleButton.classList.remove('right');
-	toggleButton.classList.add('left')
+	toggleButton.classList.add('left');
 	toggleElementRight.classList.remove('fff');
 	toggleElementRight.classList.add('transparentText');
 	toggleElementLeft.classList.remove('transparentText');

@@ -40,7 +40,7 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	
 	//screen has min-width of 376px
 	if (window.matchMedia('screen and (min-width: 376px)').matches) {
-		window.onresize = function() {location.reload();} 
+		window.onresize = function() {location.reload();};
 	}
 }());
 
@@ -147,7 +147,7 @@ const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
 	rootMargin: "0px 0px -75px 0px" //element needs to be 75px from the bottom
-}
+};
 
 const appearOnScroll = new IntersectionObserver(
 	(entries, appearOnScroll) => {
@@ -244,7 +244,7 @@ const sliderFotos3 = ['shoe3slider1.png', 'shoe3slider2.png', 'shoe3slider3.png'
 const vooruitKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:first-of-type');
 const terugKnop3 = document.querySelector('main section:nth-child(3) div:last-of-type button:last-of-type');
 
-let threePaginaNr = 0
+let threePaginaNr = 0;
 threelaatFotoZien();	
 
 function threelaatFotoZien() {

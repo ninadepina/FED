@@ -642,7 +642,7 @@ footer svg path:last-of-type { /* body of bird */
 	transform-origin: center;
 	animation: flapperen 0.4s ease-in infinite alternate;
 }	 	
-footer div:last-of-type ul:hover svg {
+footer div:last-of-type:hover svg {
   animation: vliegen 10s ease-out ;
 }
 
