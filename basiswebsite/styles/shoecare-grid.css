@@ -4,7 +4,7 @@
   font-family: 'Urbanist', sans-serif;
 }
 *::selection {
-  background: #00BCD4;
+  background: #c3edf3;
 }
   
 :root {
@@ -62,6 +62,7 @@ input[type=submit] {
   
 /* ----------------------------------------------------------------------------------------- */
   
+/* link underline animation */
 .animateLink {
   display: inline;
   position: relative;
@@ -87,9 +88,20 @@ input[type=submit] {
   width: 100%;
 }
   
-  
-  
-  
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  header svg path { /* removes etg. logo animation */
+    animation: none !important;
+  }
+  footer svg path:nth-child(2), /* removes twitter animation */
+  footer svg path:last-of-type,
+  footer div:last-of-type ul:hover svg { 
+    animation: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------ */  
   
 /* ----- ---------------------- ----- */
 /* ----- CLASSES FOR JAVASCRIPT ----- */
@@ -145,6 +157,7 @@ header {
   z-index: 300;
   margin: 0.8em 0 0 0.8em;
   padding: 0.6em 1.2em 0.4em 0.6em;
+  user-select: none;
 }
 header svg {
   width: 90px;
@@ -677,24 +690,5 @@ footer div:last-of-type:hover svg {
 @media only screen and (max-width: 745px) {
   footer {
     max-width: 94%;
-  }
-}
-
-
-
-
-/* ------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------ */
-/* prefers-reduced-motion */
-
-@media (prefers-reduced-motion: reduce) {
-  header svg path { /* removes etg. logo animation */
-    animation: none;
-  }
-  footer svg path:nth-child(2), /* removes twitter animation */
-  footer svg path:last-of-type,
-  footer div:last-of-type ul:hover svg { 
-    animation: none;
   }
 }
