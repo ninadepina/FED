@@ -50,20 +50,20 @@ let pageNr1 = 0;
 showImg();	
 
 function showImg() {
-	if (pageNr1 > sliderShoeKit.length -1) { //paginaNr > last picture? 
-		pageNr1 = 0; //back to beginning
+	if (pageNr1 > sliderShoeKit.length -1) { //if paginaNr > last picture? 
+		pageNr1 = 0; //then back to beginning
 	}
-	if (pageNr1 < 0) { //paginaNr < first picture?
-		pageNr1 = sliderShoeKit.length -1; //back to end
+	if (pageNr1 < 0) { //if paginaNr < first picture?
+		pageNr1 = sliderShoeKit.length -1; //then back to end
 	}
 	slider1st.src = 'images/' + sliderShoeKit[pageNr1];
 }
 
-forward1.addEventListener('click', ()=> {
+forward1.addEventListener('click', ()=> { //button forward
     pageNr1 = pageNr1 + 1 ;
 	showImg();
 } );
-back1.addEventListener('click', ()=> {
+back1.addEventListener('click', ()=> { //button backwards
     pageNr1 = pageNr1 - 1 ;
 	showImg();
 } );

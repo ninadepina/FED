@@ -138,7 +138,6 @@ window.addEventListener('scroll', ()=> {
 
 
 
-
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /**************************************************************/
 /* intersection observer --> fades elements in when scrolling */
@@ -175,9 +174,6 @@ faders.forEach(fader => {
 
 
 
-
-
-
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 /*****************************************************/
 /* shoe product sliders (index.html --> 3rd section) */
@@ -194,20 +190,20 @@ let onePaginaNr = 0;
 onelaatFotoZien();	
 
 function onelaatFotoZien() {
-	if (onePaginaNr > sliderFotos1.length -1) { //paginaNr > last picture? 
-		onePaginaNr = 0; //back to beginning
+	if (onePaginaNr > sliderFotos1.length -1) { //if paginaNr > last picture? 
+		onePaginaNr = 0; //then back to beginning
 	}
-	if (onePaginaNr < 0) { //paginaNr < first picture?
-		onePaginaNr = sliderFotos1.length -1; //back to end
+	if (onePaginaNr < 0) { //if paginaNr < first picture?
+		onePaginaNr = sliderFotos1.length -1; //then back to end
 	}
 	slider1.src = 'images/' + sliderFotos1[onePaginaNr];
 }
 
-vooruitKnop1.addEventListener('click', ()=> {
+vooruitKnop1.addEventListener('click', ()=> { //button forward
     onePaginaNr = onePaginaNr + 1 ;
 	onelaatFotoZien();
 } );
-terugKnop1.addEventListener('click', ()=> {
+terugKnop1.addEventListener('click', ()=> { //button backwards
     onePaginaNr = onePaginaNr - 1 ;
 	onelaatFotoZien();
 } );
