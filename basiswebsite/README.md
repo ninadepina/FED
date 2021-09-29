@@ -107,7 +107,7 @@ Stand van zaken:
 
 ### Stand van zaken
 - alle pagina's zijn af 
-- bezig met wat extra dingen toevoegen
+- bezig met 'js intersection observer'
 
 
 ### Agenda voor meeting
@@ -133,30 +133,29 @@ Stand van zaken:
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
-Lijst met je bevindingen die in de test naar voren kwamen:
+Lijst met bevindingen die in de test naar voren kwamen:
+- Visuele beperkingen kunnen ertoe lijden dat de website anders wordt ervaren dan dat de bedoeling is.
+- Motorische beperkingen of tremoren (parkinson, spasme, etc.) kunnen het lastig maken om de website te besturen.
+- Moeite met concentreren kan het bezoeken van een website frustrerend maken.
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Visuele beperkingen
+Oplossingen:
+- Duidelijk contrast
+- GEEN kleine tekst, buttons en andere elementen
+- Duidelijke structuur voor een screenreader
 
 
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Motorische beperking of tremoren
+Oplossingen: 
+- GEEN kleine buttons en andere elementen (deze ook niet te dicht op elkaar zetten), grote hitboxen dus
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
+#### Concentratieproblemen
+Oplossingen:
+- GEEN grote lappen tekst
+- Duidelijke structuur, titels en uitleg
+- Inputs met placeholders EN labels
 
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
 </details>
 
@@ -170,21 +169,18 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+- alle pagina's zijn af
+- aan het kijken naar 'css subgrid'
 
 
 ### Agenda voor meeting
-samen met je groepje opstellen
-
 | Nina (ik)      | Student 2          | Student 3    | 
 | ---            | ---                | ---          | 
-| ...            | ...                | ...          | 
+| x              | ...                | ...          | 
 
 
 
 ### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
 - punt 1
 - punt 2
 - nog een punt
@@ -202,7 +198,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+In het begin moest ik weer eventjes wennen omdat ik al een tijdje geen code had geschreven. Ik weet van mijzelf dat ik het snel op pak en dat als ik er even voor ga zitten er meestal al gauw wat op tafel ligt. Ik heb nauwelijks ervaring met coderen (enkel vorig schooljaar) en ik kon daarom niet zo goed inschatten hoeveel tijd het allemaal ging kostten. Ik had besloten om er daarom in de eerste week wat extra tijd in te steken, dit om te kijken hoe soepel (of juist niet) het liep.
+Uiteindelijk verliep alles erg soepel, en was ik eigenlijk 2 weken van te voren al klaar.
 
 ### Screenshot(s)
 
@@ -222,7 +219,6 @@ hier screenshot(s) van je eindresultaat
 ### HTML
 1. svg tag: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
 2. HTML character codes: https://www.rapidtables.com/web/html/html-codes.html
-3. ...
 
 ### CSS
 1. user-select: https://developer.mozilla.org/en-US/docs/Web/CSS/user-select

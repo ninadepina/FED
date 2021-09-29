@@ -95,25 +95,20 @@ button {
 
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-  header svg path { /* removes etg. logo animation */
-    animation: none !important;
-  }
+  header svg path, /* removes etg. logo animation */
+  section:first-of-type div ul, /* removes titel roulette animation */
+  section:nth-child(4) div a:hover, /* removes button gradient animation */
+  section:nth-child(4) div a:focus,
   footer svg path:nth-child(2), /* removes twitter animation */
   footer svg path:last-of-type,
   footer div:last-of-type ul:hover svg { 
     animation: none !important;
+    -webkit-animation: none !important;
   }
   .fade-in { /* NO animation with intersectionObserver*/
     opacity: 1 !important;
     transform: translateY(0) !important;
     transition: none !important;
-  }
-  section:first-of-type div ul { /* removes titel roulette animation */
-    animation: none !important;
-  }
-  section:nth-child(4) div a:hover, section:nth-child(4) div a:focus { /* removes button gradient animation */
-    animation: none !important;
-    -webkit-animation: none !important;
   }
 }
 

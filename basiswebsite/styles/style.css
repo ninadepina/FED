@@ -90,9 +90,7 @@ input[type=submit] {
 
 /* prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-  header svg path { /* removes etg. logo animation */
-    animation: none !important; 
-  }
+  header svg path, /* removes etg. logo animation */
   footer svg path:nth-child(2), /* removes twitter animation */
   footer svg path:last-of-type,
   footer div:last-of-type ul:hover svg { 
