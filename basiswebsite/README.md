@@ -219,14 +219,17 @@ hier screenshot(s) van je eindresultaat
 ### HTML
 1. svg tag: https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg
 2. HTML character codes: https://www.rapidtables.com/web/html/html-codes.html
+3. thumbnail for video tag: https://stackoverflow.com/questions/20075875/how-to-set-the-thumbnail-image-on-html5-video
 
 ### CSS
 1. user-select: https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
 2. mirror items: https://stackoverflow.com/questions/5406368/can-you-use-css-to-mirror-flip-text
 3. multiple transforms: https://stackoverflow.com/questions/10765755/how-to-apply-multiple-transforms-in-css
+4. subgrid: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Subgrid and https://codepen.io/brianhaferkamp/pen/XWXEbPp
+5. @supports: https://developer.mozilla.org/en-US/docs/Web/CSS/@supports
 
 ### Javascript
-1. getElementsByTagName: https://stackoverflow.com/questions/17349081/change-style-of-all-elements-using-getelementsbytagname
+1. getElementsByTagName (uiteindelijk NIET gebruikt): https://stackoverflow.com/questions/17349081/change-style-of-all-elements-using-getelementsbytagname
 2. detect screen width: https://stackoverflow.com/questions/31162606/how-to-detect-screen-size-for-responsive-web-design
 3. reload after resize: https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
 4. addEventListener 'mouseout': https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event
