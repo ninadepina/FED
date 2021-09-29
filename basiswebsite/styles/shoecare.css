@@ -385,7 +385,7 @@ header details {
   
   section:nth-child(2) {
     margin-bottom: 3em;
-    padding: 4em 2em 2em 2em;
+    padding: 4em 2em 0 2em;
   
     display: grid; 
     align-items: center;
@@ -401,12 +401,12 @@ header details {
     grid-column: 1 / 7;
     grid-row: 2;
     align-self: flex-end;
-    padding-top: 3em;
+    padding-top: 2em;
   }
   section:nth-child(2) p:last-of-type {
     grid-column: 7 / 13;
     grid-row: 2;
-    padding-top: 3em;
+    padding-top: 2em;
   }
   
   
