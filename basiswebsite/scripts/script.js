@@ -23,7 +23,7 @@ const hamburgerMenu = document.querySelector('header details summary span');
 		hamburgerMenu.classList.add('fffBg');
 	}
 	else {
-		for (i = 0; i < navLeft.length; ++i) { //loop to change all elements in 'navLeft'
+		for (i = 0; i < navLeft.length; i++) { //loop to change all elements in 'navLeft'
 			navLeft[i].classList.add('fff');
 		}
 
@@ -52,7 +52,7 @@ window.addEventListener('scroll', ()=> {
 	//page is scrolled and screen has a max width of 1000px
 	if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('ooo', 'fff');
 		}
 	
@@ -71,7 +71,7 @@ window.addEventListener('scroll', ()=> {
 		header.classList.remove('transparent');
 		header.classList.add('fffTransparent');
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('fff');
 			navLeft[i].classList.add('ooo');
 		}
@@ -86,7 +86,7 @@ window.addEventListener('scroll', ()=> {
 		header.classList.remove('fffTransparent');
 		header.classList.add('transparent');
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('ooo');
 			navLeft[i].classList.add('fff');
 		}

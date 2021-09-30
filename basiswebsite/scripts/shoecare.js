@@ -19,11 +19,11 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	//page is scrolled and screen has a max width of 1000px
     if (window.pageYOffset > 50 && window.matchMedia('screen and (max-width: 1000px)').matches) {
 
-		for (i = 0; i < navLeft.length; ++i) { //loop to change all elements in 'navLeft'
+		for (i = 0; i < navLeft.length; i++) { //loop to change all elements in 'navLeft'
 			navLeft[i].classList.add('fff');
 		}
 	
-		for (j = 0; j < navRight.length; ++j) { //loop to change all elements in 'navRight'
+		for (j = 0; j < navRight.length; j++) { //loop to change all elements in 'navRight'
 			navRight[j].classList.add('fff');
 		}
 
@@ -35,10 +35,10 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	
 	//page has a max width of 1000px
 	else if (window.matchMedia('screen and (max-width: 1000px)').matches) {
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.add('fff');
 		}
-		for (j = 0; j < navRight.length; ++j) { 
+		for (j = 0; j < navRight.length; j++) { 
 			navRight[j].classList.add('fff');
 		}
  
@@ -49,10 +49,10 @@ const hamburgerMenu = document.querySelector('header details summary span');
 	}
 
 	else {
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.add('fff');
 		}
-		for (j = 0; j < navRight.length; ++j) { 
+		for (j = 0; j < navRight.length; j++) { 
 			navRight[j].classList.add('fff');
 		}
 
@@ -82,10 +82,10 @@ window.addEventListener('scroll', ()=> {
 		header.classList.remove('transparent');
 		header.classList.add('fffTransparent');
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('ooo');
 		}
-		for (j = 0; j < navRight.length; ++j) { 
+		for (j = 0; j < navRight.length; j++) { 
 			navRight[j].classList.remove('fff');
 		}
 
@@ -101,11 +101,11 @@ window.addEventListener('scroll', ()=> {
 		header.classList.remove('transparent');
 		header.classList.add('fffTransparent');
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('fff');
 			navLeft[i].classList.add('ooo');
 		}
-		for (j = 0; j < navRight.length; ++j) { 
+		for (j = 0; j < navRight.length; j++) { 
 			navRight[j].classList.remove('fff');
 			navRight[j].classList.add('ooo');
 		}
@@ -120,11 +120,11 @@ window.addEventListener('scroll', ()=> {
 		header.classList.remove('fffTransparent');
 		header.classList.add('transparent');
 
-		for (i = 0; i < navLeft.length; ++i) { 
+		for (i = 0; i < navLeft.length; i++) { 
 			navLeft[i].classList.remove('ooo');
 			navLeft[i].classList.add('fff');
 		}
-		for (j = 0; j < navRight.length; ++j) { 
+		for (j = 0; j < navRight.length; j++) { 
 			navRight[j].classList.remove('ooo');
 			navRight[j].classList.add('fff');
 		}
