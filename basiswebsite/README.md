@@ -166,17 +166,13 @@ Oplossingen:
 
 
 ### Agenda voor meeting
-| Nina (ik)      | Student 2          | Student 3    | 
-| ---            | ---                | ---          | 
-| x              | ...                | ...          | 
-
+| Nina (ik)      | Student 2    | Student 3    | 
+| ---            | ---          | ---          | 
+| x              | (afwezig)    | (afwezig)    | 
 
 
 ### Verslag van meeting
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- benieuwd naar eindresultaat
 
 </details>
 
