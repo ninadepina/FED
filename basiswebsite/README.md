@@ -6,6 +6,7 @@
 ## Jij
 
 <details>
+<summary></summary>
 
 ### Auteur:
 Nina Vens
@@ -25,6 +26,7 @@ Responsive (eigenlijk allebei)
 ## Je website
 
 <details>
+<summary></summary>
 
 ### Je opdracht:
 https://www.etq-amsterdam.com
@@ -49,6 +51,7 @@ shoecare
 ## Breakdownschets (week 1)
 
 <details>
+<summary></summary>
 
 ### de hele pagina: 
 <img src="images/breakdownETQ.png" width="375px" alt="breakdown van de hele pagina">
@@ -62,6 +65,7 @@ shoecare
 ## Voortgang 1 (week 2)
 
 <details>
+<summary></summary>
 
 ### Stand van zaken
 Als ik eenmaal begin met coderen/programmeren pak ik het weer snel op.
@@ -91,6 +95,7 @@ Stand van zaken:
 ## Voortgang 2 (week 3)
 
 <details>
+<summary></summary>
 
 ### Stand van zaken
 - alle pagina's zijn af 
@@ -117,6 +122,7 @@ Stand van zaken:
 ## Toegankelijkheidstest (week 4)
 
 <details>
+<summary></summary>
 
 ### Bevindingen
 Lijst met bevindingen die in de test naar voren kwamen:
@@ -152,6 +158,7 @@ Oplossingen:
 ## Voortgang 3 (week 4)
 
 <details>
+<summary></summary>
 
 ### Stand van zaken
 - alle pagina's zijn af
@@ -180,6 +187,7 @@ Oplossingen:
 ## Eindgesprek (week 5)
 
 <details>
+<summary></summary>
 
 ### Stand van zaken
 In het begin moest ik weer eventjes wennen omdat ik al een tijdje geen code had geschreven. Ik weet van mijzelf dat ik het snel op pak en dat als ik er even voor ga zitten er meestal al gauw wat op tafel ligt. Ik heb nauwelijks ervaring met coderen (enkel vorig schooljaar) en ik kon daarom niet zo goed inschatten hoeveel tijd het allemaal ging kostten. Ik had besloten om er daarom in de eerste week wat extra tijd in te steken, dit om te kijken hoe soepel (of juist niet) het liep.
