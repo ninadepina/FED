@@ -1,11 +1,4 @@
 # Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
 
 
 
@@ -13,7 +6,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 <details>
-<summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Auteur:
 Nina Vens
@@ -33,8 +25,6 @@ Responsive (eigenlijk allebei)
 ## Je website
 
 <details>
-<summary>uitwerken voor kick-off werkgroep</summary>
-
 
 ### Je opdracht:
 https://www.etq-amsterdam.com
@@ -59,7 +49,6 @@ shoecare
 ## Breakdownschets (week 1)
 
 <details>
-<summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
 <img src="images/breakdownETQ.png" width="375px" alt="breakdown van de hele pagina">
@@ -73,7 +62,6 @@ shoecare
 ## Voortgang 1 (week 2)
 
 <details>
-<summary>uitwerken voor 1e voortgang</summary>
 
 ### Stand van zaken
 Als ik eenmaal begin met coderen/programmeren pak ik het weer snel op.
@@ -103,7 +91,6 @@ Stand van zaken:
 ## Voortgang 2 (week 3)
 
 <details>
-<summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
 - alle pagina's zijn af 
@@ -130,7 +117,6 @@ Stand van zaken:
 ## Toegankelijkheidstest (week 4)
 
 <details>
-<summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
 Lijst met bevindingen die in de test naar voren kwamen:
@@ -166,11 +152,10 @@ Oplossingen:
 ## Voortgang 3 (week 4)
 
 <details>
-<summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
 - alle pagina's zijn af
-- aan het kijken naar 'css subgrid'
+- 'css subgrid' (alleen beschikbaar voor Firefox) uitgezocht en toegevoegd
 
 
 ### Agenda voor meeting
@@ -195,7 +180,6 @@ Oplossingen:
 ## Eindgesprek (week 5)
 
 <details>
-<summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
 In het begin moest ik weer eventjes wennen omdat ik al een tijdje geen code had geschreven. Ik weet van mijzelf dat ik het snel op pak en dat als ik er even voor ga zitten er meestal al gauw wat op tafel ligt. Ik heb nauwelijks ervaring met coderen (enkel vorig schooljaar) en ik kon daarom niet zo goed inschatten hoeveel tijd het allemaal ging kostten. Ik had besloten om er daarom in de eerste week wat extra tijd in te steken, dit om te kijken hoe soepel (of juist niet) het liep.
@@ -233,6 +217,6 @@ hier screenshot(s) van je eindresultaat
 2. detect screen width: https://stackoverflow.com/questions/31162606/how-to-detect-screen-size-for-responsive-web-design
 3. reload after resize: https://stackoverflow.com/questions/14915653/refresh-page-on-resize-with-javascript-or-jquery
 4. addEventListener 'mouseout': https://developer.mozilla.org/en-US/docs/Web/API/Element/mouseout_event
-5. intersectionObserver: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver
+5. intersectionObserver: https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver and https://www.youtube.com/watch?v=T8EYosX4NOo&t=290s
 
 </details>
