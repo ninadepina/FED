@@ -3,7 +3,7 @@
 
 
 
-## Jij
+## Ik
 
 <details>
 <summary></summary>
@@ -11,10 +11,10 @@
 ### Auteur:
 Nina Vens
 
-#### Je startniveau:
+#### Startniveau:
 Rood
 
-#### Je focus:
+#### Focus:
 Responsive (eigenlijk allebei)
  
 </details>
@@ -23,12 +23,12 @@ Responsive (eigenlijk allebei)
 
 
 
-## Je website
+## Mijn website
 
 <details>
 <summary></summary>
 
-### Je opdracht:
+### Gekozen website:
 https://www.etq-amsterdam.com
 
 
@@ -53,7 +53,7 @@ shoecare
 <details>
 <summary></summary>
 
-### de hele pagina: 
+### Hele pagina: 
 <img src="images/breakdownETQ.png" width="375px" alt="breakdown van de hele pagina">
 
 </details>
