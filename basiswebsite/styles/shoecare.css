@@ -1071,6 +1071,7 @@ section:last-of-type {
   transform: translate(-50%, -50%);
   z-index: 100;
   font-size: 0.8em;
+  opacity: 1;
 }
 section:last-of-type p, section:last-of-type a {
   font-size: 1em;
