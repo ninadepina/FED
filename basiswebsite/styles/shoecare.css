@@ -105,7 +105,7 @@ button {
     animation: none !important;
     -webkit-animation: none !important;
   }
-  .fade-in { /* NO animation with intersectionObserver*/
+  section { /* NO animation with intersectionObserver*/
     opacity: 1 !important;
     transform: translateY(0) !important;
     transition: none !important;
@@ -150,18 +150,6 @@ button {
 }
 .displayNone {
   display: none;
-}
-
-
-/* intersection observer */
-.fade-in {
-  opacity: 0;
-  transform: translateY(10%);
-  transition: opacity 150ms ease-in, transform 250ms ease-in;
-}
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 
@@ -605,9 +593,16 @@ header details {
 /*--------------------------------------------------------------------*/
 /*--------------------------------------------------------------------*/
 
-/* ---------------------- */
+/* intersection observer */
 section {
   letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(10%);
+  transition: opacity 150ms ease-in, transform 250ms ease-in;
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0);
 }
 /* ---------------------- */
 
@@ -618,6 +613,7 @@ section {
 
 section:first-of-type {
   position: relative;
+  transform: translateY(0); /* makes sure the intersectionObserver doesn't scroll */
 }
 
 section:first-of-type img {

@@ -143,7 +143,7 @@ window.addEventListener('scroll', ()=> {
 /* intersection observer --> fades elements in when scrolling */
 /**************************************************************/
 
-const faders = document.querySelectorAll('.fade-in');
+const faders = document.querySelectorAll('section');
 
 const appearOptions = {
 	rootMargin: "0px 0px -75px 0px" //element needs to be 75px from the bottom

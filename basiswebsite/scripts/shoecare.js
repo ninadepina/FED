@@ -173,7 +173,7 @@ window.addEventListener('scroll', ()=> {
 /* intersection observer --> fades elements in when scrolling */
 /**************************************************************/
 
-const faders = document.querySelectorAll('.fade-in');
+const faders = document.querySelectorAll('section');
 
 const appearOptions = {
 	threshold: 0,
