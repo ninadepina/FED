@@ -607,6 +607,7 @@ footer div:last-of-type:hover svg {
 
   footer p, footer ul {
     max-width: 88vw;
+    padding-bottom: 1.6em;
     border-bottom: 1px solid rgba(224, 224, 224, 0.726);
   }
   footer div:nth-child(7) ul {
