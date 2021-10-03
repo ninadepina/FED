@@ -191,12 +191,12 @@ Uiteindelijk verliep alles erg soepel, en was ik eigenlijk 2 weken van te voren 
 
 ### Screenshot(s)
 
-<img src="images/indexDesktop" width="375px" alt="index.html desktop">
-<img src="images/shoecareDesktop" width="375px" alt="shoecare.html desktop">
-<img src="images/shoecare-gridDesktop" width="375px" alt="shoecare-grid.html desktop">
-<img src="images/indexMobile" width="375px" alt="index.html mobile">
-<img src="images/shoecareMobile" width="375px" alt="shoecare.html mobile">
-<img src="images/shoecare-gridMobile" width="375px" alt="shoecare-grid.html mobile">
+<img src="images/indexDesktop.png" width="375px" alt="index.html desktop">
+<img src="images/shoecareDesktop.png" width="375px" alt="shoecare.html desktop">
+<img src="images/shoecare-gridDesktop.png" width="375px" alt="shoecare-grid.html desktop">
+<img src="images/indexMobile.png" width="375px" alt="index.html mobile">
+<img src="images/shoecareMobile.png" width="375px" alt="shoecare.html mobile">
+<img src="images/shoecare-gridMobile.png" width="375px" alt="shoecare-grid.html mobile">
 
 </details>
 
